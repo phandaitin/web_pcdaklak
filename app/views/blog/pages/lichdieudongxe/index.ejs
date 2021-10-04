@@ -1,0 +1,177 @@
+ 
+<%- include('./../../helpers/pagination') %>
+ 
+
+<% 
+	const collection = 'lichdieudongxe';
+	const linkPrefix = systemConfig.prefixBlog + `/${collection}`;
+    const folderUpload = 'uploads' + `/${collection}/`;
+%>
+ 
+<section class="news-single section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-12">
+				<div class="row">
+					<div class="col-12">
+						
+						<!-- PHUONG THUC VAN HANH -->
+						<div class="single-widget search">
+							<div class="form">
+								<div class="table-responsive" style="padding-top:13px">      
+									<table class="table table-bordered table-hover">                                    
+										<thead>
+											<tr style="background-color: #f0f3f5 ;color:#310cb6; text-align:center ;font-size:16px; font-weight: bold;"> 
+												<td colspan="3" style="padding: 10px 0px"  > 
+													<span >
+														LỊCH ĐIỀU ĐỘNG XE										
+													</span>
+												</td> 
+											</tr>								  
+											</thead>
+
+										<thead style="line-height: 30px" > 
+											<tr style="text-align:center; color:#462fc8 ; font-size:15px"> 
+												<th style="width:5%" >TT</th>
+												<th style="width:85% "> Nội dung </th>	<th style="width:10%" > Link </th>								
+											</tr>									  
+										</thead>
+										<tbody>       
+											<% for(let i = 0 ; i < lichdieudongxe.length ; i++) { %>
+											<tr style="color:#333 ; font-size:15px ;line-height: 30px" >
+												<td style="text-align:center" ><%= i+1 %></td>								
+												<td style="text-align:left;  padding-left: 5px;"><%= lichdieudongxe[i].name %></td> 
+												<td style="text-align:center">
+													<a href="<%= folderUpload + lichdieudongxe[i].fileUpload %>" 			target="_blank"> Xem  
+													</a>
+												</td>
+												
+											</tr>
+											<% } %>
+											
+											
+											</tbody>
+										
+									</table>
+								</div>
+							</div>
+						</div>
+						<!------------------------------>
+				
+					</div>	
+				</div>	
+				<!-- PAGINAITON -->
+				<div class="col-lg-12">
+					<!-- <paginationHelper(pagination, linkPrefix , keyword)  -->
+				</div>				
+				<!-- PAGINAITON -->
+			</div>
+			
+			<div class="col-lg-4 col-12">
+				<div class="main-sidebar">
+					<div class="single-widget side-tags">						
+						<a href="https://eoffice.cpc.vn/">
+							<img src="uploads/banner/chatoffice.png"style="width: 350px; height: 80px"></>	
+						</a>						
+						<a href="https://ksop.cpc.vn/login">
+							<img src="uploads/banner/ksop.png" style="width: 350px; height: 80px"></>	
+						</a>						 
+						<a href="https://elearning.evn.com.vn/login">
+							<img src="uploads/banner/elearning.png" style="width: 350px; height: 80px"></>	
+						</a>
+						<a href="https://hrms.cpc.vn/">
+							<img src="uploads/banner/hrms.png" style="width: 350px; height: 80px"></>	
+						</a>	
+						<a href="https://hrms.cpc.vn/">
+							<img src="uploads/banner/ungdungnoibo.png" style="width: 350px; height: 80px"></>	
+						</a>					 
+						
+					</div>
+					<!-- FACEBOOK YOUTUBE  -->
+					<div class="single-widget side-tags">
+						<div class="row">
+							<div class="col-lg-7 col-12">							
+								<div class="col-lg-12 col-12">
+									<script src="https://apis.google.com/js/platform.js"></script>
+									<div class="g-ytsubscribe" data-channelid="UC2ijllfPCBz_Mb0Na5XaXVg" 
+										data-layout="full" data-theme="dark" data-count="default"> 
+									</div>
+								</div>
+								<div class="col-lg-12 col-12" >
+									<script src="https://apis.google.com/js/platform.js"></script>
+									<div class="g-ytsubscribe" data-channelid="UC8SgUsfA2OGNDf4ZwGt9JLA" 
+										data-layout="full" data-theme="dark" data-count="default">
+									</div>						 
+								</div>
+							
+								<div class="col-lg-12 col-12" >
+									<script src="https://apis.google.com/js/platform.js"></script>
+									<div class="g-ytsubscribe" data-channelid="UCiIXYmwc2gmPUlJkiNqhx_Q" 
+										data-layout="full" data-theme="dark" data-count="default">
+									</div>						 
+								</div>
+							</div>	
+							<div class="col-lg-5 col-12">
+								<a href="https://www.facebook.com/groups/ketnoidongnghiep" target="_blank">								
+									<img src="uploads/image/fbcpc.jpg" 
+									style="border-radius:100%; height:90% "> 
+								</a> 
+							</div>
+							
+						</div>						 
+						
+					</div>
+					 
+					<!-- WEB DAKALK -->
+					<div class="single-widget search">							
+							<div class="col-lg-12">
+							<ul class="scroll3">	
+								<li>
+									<a href="https://baodaklak.vn/" style="text-decoration: none" title="Báo Đắk Lắk" target="_blank">
+										<img src="uploads/banner/baodaklak1.png" class="img-responsive" style="padding:15px 0px"/>							
+									</a>
+								</li>		
+								<li>
+									<a href="https://daklak24h.com.vn/" style="text-decoration: none" title="Đắk Lắk 24h" target="_blank" >
+										<img src="uploads/banner/baodaklak2.png" alt="" class="img-responsive" />
+									</a>						
+								</li>
+								<li>
+									<a href="https://daklak.gov.vn/" style="text-decoration: none" title="Cổng thông tin điện tử Tỉnh Đắk Lắk" target="_blank" >
+										<img src="uploads/banner/baodaklak3.png" alt="" class="img-responsive" />
+									</a>
+								</li>
+											
+							</ul>	 				
+						</div>
+					</div>
+					<!-- CHUYEN MỤC LIÊN QUAN  -->
+
+					<div class="single-widget category">
+						<h3 class="title">CHUYÊN MỤC KHÁC</h3>
+						<ul class="categor-list" style="padding-left: 25px;">
+							<li><a href="127.0.0.1/">TRANG CHỦ</a></li>
+							<li><a href="chuyenmuc/123">TIN TỔNG HỢP</a></li>							
+						</ul>
+					</div>
+				
+					
+					<div class="single-widget side-tags">
+						<h3 class="title">Hoạt động khác</h3>
+						<ul class="tag">
+							<li><a href="#">Hình ảnh doanh nghiệp</a></li>
+							<li><a href="#">Việc làm ý nghĩa</a></li>
+							<li><a href="#">Tập san công ty</a></li>
+							<li><a href="#">Thành tích đạt được</a></li>
+							<li><a href="https://pclangson.npc.com.vn/" target="blank">Đơn vị kết nghĩa</a></li>
+							<li><a href="#">Hoạt động khác</a></li>							
+						</ul>
+					</div>
+				
+				</div>					
+			</div>
+		</div>
+
+	</div> 
+</section>
+ 

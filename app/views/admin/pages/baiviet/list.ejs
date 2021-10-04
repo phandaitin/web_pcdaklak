@@ -1,0 +1,151 @@
+ 
+<%- include('./../../helpers/status') %>
+<%- include('./../../helpers/pagination') %>
+<%- include('./../../helpers/sort') %>
+<%- include('./../../helpers/image') %>
+
+<% 
+	const collection = 'baiviet';
+	const linkPrefix = systemConfig.prefixAdmin + `/${collection}`;
+   const folderUpload = 'uploads' + `/${collection}/`;
+%>
+<!-- 
+   <%= linkPrefix %> 
+-->
+<%- include('./../../elements/flash') %>
+<div class="row">
+   <div class="col-lg-12">
+      <div class="panel panel-info">
+         <div class="panel-heading">
+            Search & Filter
+            <a href="<%= linkPrefix %>">
+            <span id="icon-reload" class="glyphicon glyphicon-refresh"></span>
+            </a>
+         </div>
+         <div class="panel-body">
+            <div class="row">
+               <div class="status-list col-sm-4 pl0">
+                   
+               </div>
+               <!-- REFRESH - CLEAR -->
+               <div class="col-sm-4">
+                  <form action="<%= linkPrefix %>/" method="GET">
+                     <div class="input-group">
+                        <input type="text" class="form-control" name="keyword" placeholder="Search for..." value="<%= keyword %>">
+                        <!-- <input type="hidden" value="all"> -->
+                        <span class="input-group-btn">
+                        <button class="btn btn-info" type="submit">Search</button>
+                        </span>
+                        <span class="input-group-btn">
+                        <button class="btn btn-success" type="button"><a href="<%= linkPrefix %>">Clear</a></button>
+                        </span>
+                     </div>
+                  </form>
+               </div>
+
+               <div class="status-list col-sm-4 pl0">
+                  <div class="pull-right">
+                     <a href="<%= linkPrefix %>/form" class="btn btn-primary btn-addNew">Thêm mới  </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-lg-12">
+      <div class="panel panel-info">
+         <div class="panel-heading">
+            Danh sách             
+         </div>
+         <!-- /.panel-heading -->
+         <div class="panel-body">
+            <form role="form" class="form-inline zt-form" id="zt-form" action="" method="POST" > 
+               <div class="zcontrols">
+                   
+              
+               </div>
+               <div class="table-responsive">                  
+                  <table class="table table-striped table-bordered table-hover">                                            
+                     <thead>
+                        <tr> 
+                           
+                           <th>#</th>
+                           <th style="text-align:center; width: 10% "> Ảnh Thumb</th>
+                           <th style="text-align:center; width: 200px"> 
+                              <%- sortHelper(linkPrefix, 'Chuyên mục', 'tmain.name',  sortField, sortType) %>   
+                           </th>  
+                           <th style="text-align:center; width: 240px"> 
+                              <%- sortHelper(linkPrefix, 'Tiêu đề', 'name',  sortField, sortType) %>   
+                           </th>                           
+                        
+                           
+                           <th style="text-align:center; width: 80px">
+                              <%- sortHelper(linkPrefix, 'Trạng thái', 'status', sortField,  sortType) %>   
+                           </th>
+                           <th style="text-align:center; width: 80px "> 
+                              <%- sortHelper(linkPrefix, 'Vị trí', 'posititon', sortField,  sortType) %>   
+                           </th>
+                           <th style="text-align:center; width: 60px "> 
+                              <%- sortHelper(linkPrefix, 'TT', 'order', sortField,  sortType) %>   
+                           </th>     
+                           
+                           
+                           
+                           <th>
+                              <%- sortHelper(linkPrefix, 'Created', 'createdAt',  sortField, sortType) %>   
+                           </th>
+                           <th style="text-align:center; width:120px"> 
+                              Action
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        
+                        <% for(let i=0 ; i < data.length ; i++ ) { %>
+                           <tr>
+                              
+                              <td><%= i+1 %></td>
+                              <td style="text-align:center;" >
+                                 <%- imageHelper(folderUpload, data[i].fileUpload , 'style="width: 50px; margin:auto"' ) %>                                  
+                              </td>                                                            
+                              <td><%= data[i].tmain.name %></td> 
+                              <td><%= data[i].name %></td>    
+
+                              <td style="text-align:center;" >
+                                 <%- statusHelper(linkPrefix , data[i].status,  data[i].id) %> 
+                              </td>
+                              <td style="text-align:center;">
+                                 <% if(data[i].position ==='Top') {%>
+                                    <a href="<%= linkPrefix %>/change-position/<%= data[i].id %>/<%= data[i].position %>">
+                                       <span class="btn btn-success btn-sm">Top</span>
+                                    </a>
+                                    <%} else if(data[i].position ==='None') {%>
+                                       <a href="<%= linkPrefix %>/change-position/<%= data[i].id %>/<%= data[i].position %>">
+                                          <span class="btn btn-warning btn-sm">None</span>
+                                       </a>
+                                 <%}%>
+                              </td>
+                              <td style="text-align:center" ><%= data[i].order %></td>     
+                              <td><%= moment(data[i].createdAt).format(systemConfig.dateFormat) %></td>
+                              <td>                                 
+                                 <a href="<%= linkPrefix %>/form/<%= data[i].id %>"   style=" font-size:15px;" class="btn btn-edit glyphicon glyphicon-edit"> </a>
+                                 <a href="<%= linkPrefix %>/delete/<%= data[i].id %>"  style=" font-size:15px;" class="btn btn-delete glyphicon glyphicon-trash"> </a>
+                              </td>
+                           </tr>
+                        <% } %>
+
+                     </tbody>
+                  </table>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+   <!-- PAGINAITON -->
+   <div class="col-lg-12">
+      <%- paginationHelper(pagination, linkPrefix,  keyword) %>
+   </div>
+</div>
+
+       
+     

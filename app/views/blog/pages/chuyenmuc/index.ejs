@@ -1,0 +1,504 @@
+<% 
+const folderUploads   ='uploads/baiviet/'
+%>
+
+<!-- <%= baivietNhanvatsukien[0] %> -->
+ 
+<section class="news-single section">
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-lg-8 col-12" >				
+				<!------TIN NỔI BẬT RANDOM------->
+				<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px"  >
+					<H6 style="color: #d40d13; font-weight:bold; font-family: 'Arial' ; ">
+						<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;					 
+						TIN NỔI BẬT
+					<H6>
+				</div>	
+				 
+				<div class="row">			
+					<% for(let i = 0 ; i < baivietRandom.length  ; i ++ ) { %>
+					<div class="col-lg-4 col-12">		
+						<div class="schedule">
+							<div class="single-schedule">
+								<a href="/bai-viet/<%= baivietRandom[i]._id %>" target="_blank">
+									<img src="<%= folderUploads + baivietRandom[i].fileUpload %>"  style="width: 250px; height:160px">				 
+								</a>
+							</div>
+						</div>	 		
+						<div class="single-main">
+							<div class="news-title-tin"> 								
+								<a href="/bai-viet/<%= baivietRandom[i]._id %>"><%= baivietRandom[i].name.replace(/(<([^>]+)>)/igm,"").substr(0, 50) %>...</a>
+							</div>
+							<div class="meta-tin-chuyenmuc">	
+								<span class="date"><i class="fa fa-calendar"></i>   <%= moment(baivietRandom[i].updatedAt).format(systemConfig.dateFormat) %> | <%= baivietRandom[i].seen %> views </span>
+							</div> 			
+							<div >									
+								<h6 style="color: #333; font-family: 'Arial' ;  font-size: 16px; padding:10px ">
+									<%= baivietRandom[i].title.replace(/(<([^>]+)>)/igm,"").substr(0, 100) %>...
+								</h6>	
+							</div>						 
+						
+						</div>								
+						
+					</div>	
+
+					<% } %>
+				</div>	
+				
+				<!------TIN KINH DOANH ------->
+				<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px"  >
+					<H6 style="color: #d40d13; font-weight:bold; font-family: 'Arial' ; ">
+						<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;
+						<%= baivietKinhdoanh[0].tmain.name.toUpperCase() %>
+					<H6>
+				</div>				 
+				<% for(let i = 0 ; i < baivietKinhdoanh.length ; i ++ ) { %>
+					<div class="row" style="padding-top:10px">								
+						<div class="col-lg-4 col-12">
+							<div class="schedule">
+								<div class="single-schedule">
+									<a href="/bai-viet/<%= baivietKinhdoanh[i].id %> " target="_blank">
+										<img src="<%= folderUploads + baivietKinhdoanh[i].fileUpload %>"  style="width: 250px; height:140px">				 
+									</a>
+								</div>
+							</div>	 		
+						</div>
+						<div class="col-lg-8 col-12"  >
+							<div class="single-main">
+								<div class="news-title-tin" style="color:#2905A1; font-weight: bold; font-family: 'Arial';font-size: 17px; margin-top: 0px">		
+									<a href="/bai-viet/<%= baivietKinhdoanh[i].id %> "><%= baivietKinhdoanh[i].name.replace(/(<([^>]+)>)/igm,"").substr(0, 80) %>...</a>
+								</div>									
+								<div class="meta-tin-chuyenmuc">	
+									<span class="date"><i class="fa fa-calendar"></i>   <%= moment(baivietKinhdoanh[i].updatedAt).format(systemConfig.dateFormat) %> | <%= baivietKinhdoanh[i].seen %> views</span>
+								</div>
+
+								<div >									
+									<h6 style="color: #333; font-family: 'Arial' ;  font-size: 16px; padding:12px ">
+										<%= baivietKinhdoanh[i].title.replace(/(<([^>]+)>)/igm,"").substr(0, 150) %>...
+									</h6>	
+								</div>
+							</div>	
+						</div>	
+						
+					</div>	
+				<% } %>
+				<!---------------------- ------->
+				<!------TIN KY THUẠT ------->
+				<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px" >
+					<H6 style="color: #d40d13; font-weight:bold; ">
+						<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;
+						<%= baivietKythuat[0].tmain.name.toUpperCase() %>
+					<H6>
+				</div>				 
+				<% for(let i = 0 ; i < baivietKythuat.length ; i ++ ) { %>
+					<div class="row" style="padding-top:10px">								
+						<div class="col-lg-4 col-12">
+							<div class="schedule">
+								<div class="single-schedule">
+									<a href="/bai-viet/<%= baivietKythuat[i].id %> " target="_blank">
+										<img src="<%= folderUploads + baivietKythuat[i].fileUpload %>"  style="width: 250px; height:140px">				 
+									</a>
+								</div>
+							</div>	 		
+						</div>
+						<div class="col-lg-8 col-12" >
+							<div class="single-main">
+								<div class="news-title-tin" style="color:#2905A1; font-weight: bold; font-family: 'Arial';font-size: 17px; margin-top: 0px">		
+									<a href="/bai-viet/<%= baivietKythuat[i].id %> "><%= baivietKythuat[i].name.replace(/(<([^>]+)>)/igm,"").substr(0, 50) %>...</a>
+								</div>
+								<div class="meta-tin-chuyenmuc" >	
+									<span class="date"><i class="fa fa-calendar"></i>   <%= moment(baivietKythuat[i].createdAt).format(systemConfig.dateFormat) %> | <%= baivietKythuat[i].seen %> views </span>
+								</div> 			
+								<div >							
+									<h6 style="color: #333; font-family: 'Arial' ;  font-size: 16px; padding:12px ">
+									<%= baivietKythuat[i].title.replace(/(<([^>]+)>)/igm,"").substr(0, 150) %>...
+								</h6>	
+								</div>
+							</div>	
+						</div>	
+						
+					</div>	
+				<% } %>
+				<!---------------------- ------->
+				<!------CHUYEN DOI SO ------->
+				<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px" >
+					<H6 style="color: #d40d13; font-weight:bold; ">
+						<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;
+						<%= baivietChuyendoiso[0].tmain.name.toUpperCase() %>
+					<H6>
+				</div>				 
+				<% for(let i = 0 ; i < baivietChuyendoiso.length ; i ++ ) { %>
+					<div class="row" style="padding-top:10px">								
+						<div class="col-lg-4 col-12">
+							<div class="schedule">
+								<div class="single-schedule">
+									<a href="/bai-viet/<%= baivietChuyendoiso[i].id %> " target="_blank">
+										<img src="<%= folderUploads + baivietChuyendoiso[i].fileUpload %>"  style="width: 250px; height:140px">				 
+									</a>
+								</div>
+							</div>	 		
+						</div>
+						<div class="col-lg-8 col-12" >
+							<div class="single-main">							
+								<div class="news-title-tin" style="color:#2905A1; font-weight: bold; font-family: 'Arial';font-size: 17px; margin-top: 0px">									
+									<a href="/bai-viet/<%= baivietChuyendoiso[i].id %> "><%= baivietChuyendoiso[i].name.replace(/(<([^>]+)>)/igm,"").substr(0, 50) %>...</a>
+								</div>
+								<div class="meta-tin-chuyenmuc">	
+									<span class="date"><i class="fa fa-calendar"></i>   <%= moment(baivietChuyendoiso[i].createdAt).format(systemConfig.dateFormat) %> | <%= baivietChuyendoiso[i].seen %> views </span>
+								</div> 			
+								<div >									
+									<h6 style="color: #333; font-family: 'Arial' ;  font-size: 16px; padding:12px ">
+										<%= baivietChuyendoiso[i].title.replace(/(<([^>]+)>)/igm,"").substr(0, 150) %>...
+									</h6>	
+								</div>
+							</div>	
+						</div>	
+						
+					</div>	
+				<% } %>
+				<!---------------------- ------->
+				<!------NHAN VAT SU KIEN ------->
+				<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px" >
+					<H6 style="color: #d40d13; font-weight:bold; ">
+						<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;
+						<%= baivietNhanvatsukien[0].tmain.name.toUpperCase() %>
+					<H6>
+				</div>				 
+				<% for(let i = 0 ; i < baivietNhanvatsukien.length ; i ++ ) { %>
+					<div class="row" style="padding-top:10px">								
+						<div class="col-lg-4 col-12">
+							<div class="schedule">
+								<div class="single-schedule">
+									<a href="/bai-viet/<%= baivietNhanvatsukien[i].id %> " target="_blank">
+										<img src="<%= folderUploads + baivietNhanvatsukien[i].fileUpload %>"  style="width: 250px; height:140px">				 
+									</a>
+								</div>
+							</div>	 		
+						</div>
+						<div class="col-lg-8 col-12" >
+							<div class="single-main">
+								<div class="news-title-tin" style="color:#2905A1; font-weight: bold; font-family: 'Arial';font-size: 17px; margin-top: 0px">															
+									<a href="/bai-viet/<%= baivietNhanvatsukien[i].id %> "><%= baivietNhanvatsukien[i].name.replace(/(<([^>]+)>)/igm,"").substr(0, 50) %>...</a>
+								</div>
+								<div class="meta-tin-chuyenmuc">	
+									<span class="date"><i class="fa fa-calendar"></i>   <%= moment(baivietNhanvatsukien[i].createdAt).format(systemConfig.dateFormat) %> | <%= baivietNhanvatsukien[i].seen %> views </span>
+								</div> 			
+								<div >
+									<h6 style="color: #333; font-family: 'Arial' ;  font-size: 16px; padding:12px ">
+									<%= baivietNhanvatsukien[i].title.replace(/(<([^>]+)>)/igm,"").substr(0, 150) %>...</h6>	
+								</div>
+							</div>	
+						</div>	
+						
+					</div>	
+				<% } %>
+				<!---------------------- ------->
+				<!------DANG DOAN THEO ------->
+				<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px" >
+					<H6 style="color: #d40d13; font-weight:bold; ">
+						<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;
+						<%= baivietDangdoanthe[0].tmain.name.toUpperCase() %>
+					<H6>
+				</div>				 
+				<% for(let i = 0 ; i < baivietDangdoanthe.length ; i ++ ) { %>
+					<div class="row" style="padding-top:10px">								
+						<div class="col-lg-4 col-12">
+							<div class="schedule">
+								<div class="single-schedule">
+									<a href="/bai-viet/<%= baivietDangdoanthe[i].id %> " target="_blank">
+										<img src="<%= folderUploads + baivietDangdoanthe[i].fileUpload %>"  style="width: 250px; height:140px">				 
+									</a>
+								</div>
+							</div>	 		
+						</div>
+						<div class="col-lg-8 col-12" >
+							<div class="single-main">
+								<div class="news-title-tin" style="color:#2905A1; font-weight: bold; font-family: 'Arial';	font-size: 17px; margin-top: 0px">									
+									<a href="/bai-viet/<%= baivietDangdoanthe[i].id %> "><%= baivietDangdoanthe[i].name.replace(/(<([^>]+)>)/igm,"").substr(0, 50) %>...</a>
+								</div>
+								<div class="meta-tin-chuyenmuc" >	
+									<span class="date"><i class="fa fa-calendar"></i>   <%= moment(baivietDangdoanthe[i].createdAt).format(systemConfig.dateFormat) %> | <%= baivietDangdoanthe[i].seen %> views </span>
+								</div> 			
+								<div >									
+									<h6 style="color: #333; font-family: 'Arial' ;  font-size: 16px; padding:12px ">
+										
+										<%= baivietDangdoanthe[i].title.replace(/(<([^>]+)>)/igm,"").substr(0, 150) %>...</h6>	
+								</div>
+							</div>	
+						</div>	
+						
+					</div>	
+				<% } %>
+				<!---------------------- ------->
+
+				<!------TIN CONG DOAN ------->
+				<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px" >
+					<H6 style="color: #d40d13; font-weight:bold; ">
+						<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;
+						<%= baivietCongdoan[0].tmain.name.toUpperCase() %>
+					<H6>
+				</div>				 
+				<% for(let i = 0 ; i < baivietCongdoan.length ; i ++ ) { %>
+					<div class="row" style="padding-top:10px">								
+						<div class="col-lg-4 col-12">
+							<div class="schedule">
+								<div class="single-schedule">
+									<a href="/bai-viet/<%= baivietCongdoan[i].id %> " target="_blank">
+										<img src="<%= folderUploads + baivietCongdoan[i].fileUpload %>"  style="width: 250px; height:140px">				 
+									</a>
+								</div>
+							</div>	 		
+						</div>
+						<div class="col-lg-8 col-12" >
+							<div class="single-main">
+								<div class="news-title-tin" style="color:#2905A1; font-weight: bold; font-family: 'Arial';	font-size: 17px; margin-top: 0px">
+									<a href="/bai-viet/<%= baivietCongdoan[i].id %> "><%= baivietCongdoan[i].name.replace(/(<([^>]+)>)/igm,"").substr(0, 50) %>...</a>
+								</div>
+								<div class="meta-tin-chuyenmuc">	
+									<span class="date"><i class="fa fa-calendar"></i>   <%= moment(baivietCongdoan[i].createdAt).format(systemConfig.dateFormat) %> | <%= baivietCongdoan[i].seen %> views </span>
+								</div> 			
+								<div >									
+									<h6 style="color: #333; font-family: 'Arial' ;  font-size: 16px; padding:12px ">
+										<%= baivietCongdoan[i].title.replace(/(<([^>]+)>)/igm,"").substr(0, 150) %>...</h6>	
+								</div>
+							</div>	
+						</div>	
+						
+					</div>	
+				<% } %>
+				<!---------------------- ------->
+				 
+				<!------TIN VĂN HÓA DOANH NGHIỆP - TRI AN KH ------->
+				<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px" >
+					<H6 style="color: #d40d13; font-weight:bold; ">
+						<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;
+						<%= baivietVHDN_TrianKH[0].tmain.name.toUpperCase() %>
+					<H6>
+				</div>				 
+				<% for(let i = 0 ; i < baivietVHDN_TrianKH.length ; i ++ ) { %>
+					<div class="row" style="padding-top:10px">								
+						<div class="col-lg-4 col-12">
+							<div class="schedule">
+								<div class="single-schedule">
+									<a href="/bai-viet/<%= baivietVHDN_TrianKH[i].id %> " target="_blank">
+										<img src="<%= folderUploads + baivietVHDN_TrianKH[i].fileUpload %>"  style="width: 250px; height:140px">				 
+									</a>
+								</div>
+							</div>	 		
+						</div>
+						<div class="col-lg-8 col-12" >
+							<div class="single-main">
+								<div class="news-title-tin" style="color:#2905A1; font-weight: bold; font-family: 'Arial';	font-size: 17px; margin-top: 0px">
+									<a href="/bai-viet/<%= baivietVHDN_TrianKH[i].id %> "><%= baivietVHDN_TrianKH[i].name.replace(/(<([^>]+)>)/igm,"").substr(0, 50) %>...</a>
+								</div>
+								<div class="meta-tin-chuyenmuc">	
+									<span class="date"><i class="fa fa-calendar"></i>   <%= moment(baivietVHDN_TrianKH[i].createdAt).format(systemConfig.dateFormat) %> | <%= baivietVHDN_TrianKH[i].seen %> views </span>
+								</div> 			
+								<div >									
+									<h6 style="color: #333; font-family: 'Arial' ;  font-size: 16px; padding:12px ">
+										<%= baivietVHDN_TrianKH[i].title.replace(/(<([^>]+)>)/igm,"").substr(0, 150) %>...</h6>	
+								</div>
+							</div>	
+						</div>	
+						
+					</div>	
+				<% } %>
+				<!---------------------- ------->
+
+				<!------TIN DOAN CS PCDAKLAK ------->
+				<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px" >
+					<H6 style="color: #d40d13; font-weight:bold; ">
+						<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;
+						<%= baivietDoanCS[0].tmain.name.toUpperCase() %>
+					<H6>
+				</div>				 
+				<% for(let i = 0 ; i < baivietDoanCS.length ; i ++ ) { %>
+					<div class="row" style="padding-top:10px">								
+						<div class="col-lg-4 col-12">
+							<div class="schedule">
+								<div class="single-schedule">
+									<a href="/bai-viet/<%= baivietDoanCS[i].id %> " target="_blank">
+										<img src="<%= folderUploads + baivietDoanCS[i].fileUpload %>"  style="width: 250px; height:140px">				 
+									</a>
+								</div>
+							</div>	 		
+						</div>
+						<div class="col-lg-8 col-12" >
+							<div class="single-main">
+								<div class="news-title-tin" style="color:#2905A1; font-weight: bold; font-family: 'Arial';	font-size: 17px; margin-top: 0px">
+									<a href="/bai-viet/<%= baivietDoanCS[i].id %> "><%= baivietDoanCS[i].name.replace(/(<([^>]+)>)/igm,"").substr(0, 50) %>...</a>
+								</div>
+								<div class="meta-tin-chuyenmuc">	
+									<span class="date"><i class="fa fa-calendar"></i>   <%= moment(baivietDoanCS[i].createdAt).format(systemConfig.dateFormat) %> | <%= baivietDoanCS[i].seen %> views </span>
+								</div> 			
+								<div >									
+									<h6 style="color: #333; font-family: 'Arial' ;  font-size: 16px; padding:12px ">
+										<%= baivietDoanCS[i].title.replace(/(<([^>]+)>)/igm,"").substr(0, 150) %>...</h6>	
+								</div>
+							</div>	
+						</div>	
+						
+					</div>	
+				<% } %>
+				<!---------------------- ------->
+
+				<!------TIN THƠ VAN ------->
+				<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px" >
+					<H6 style="color: #d40d13; font-weight:bold; ">
+						<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;
+						<%= baivietThovan[0].tmain.name.toUpperCase() %>
+					<H6>
+				</div>				 
+				<% for(let i = 0 ; i < baivietThovan.length ; i ++ ) { %>
+					<div class="row" style="padding-top:10px">								
+						<div class="col-lg-4 col-12">
+							<div class="schedule">
+								<div class="single-schedule">
+									<a href="/bai-viet/<%= baivietThovan[i].id %> " target="_blank">
+										<img src="<%= folderUploads + baivietThovan[i].fileUpload %>"  style="width: 250px; height:140px">				 
+									</a>
+								</div>
+							</div>	 		
+						</div>
+						<div class="col-lg-8 col-12" >
+							<div class="single-main">
+								<div class="news-title-tin" style="color:#2905A1; font-weight: bold; font-family: 'Arial';	font-size: 17px; margin-top: 0px">
+									<a href="/bai-viet/<%= baivietThovan[i].id %> "><%= baivietThovan[i].name.replace(/(<([^>]+)>)/igm,"").substr(0, 50) %>...</a>
+								</div>
+								<div class="meta-tin-chuyenmuc">	
+									<span class="date"><i class="fa fa-calendar"></i>   <%= moment(baivietThovan[i].createdAt).format(systemConfig.dateFormat) %> | <%= baivietThovan[i].seen %> views </span>
+								</div> 			
+								<div >									
+									<h6 style="color: #333; font-family: 'Arial' ;  font-size: 16px; padding:12px ">
+										<%= baivietThovan[i].title.replace(/(<([^>]+)>)/igm,"").substr(0, 150) %>...</h6>	
+								</div>
+							</div>	
+						</div>	
+						
+					</div>	
+				<% } %>
+				<!---------------------- ------->
+			</div>
+			<div class="col-lg-4 col-12" >
+				<div class="main-sidebar" style="padding-top: 39px;">
+					<!-- THỜI TIẾT-->
+					<div class="single-widget side-tags" >						
+						<div>
+							<!-- <iframe src="https://thoitiet.vn/embed/rbpyhpyuvol?days=3&amp;hC=%23ffffff&amp;hB=%232f4f9c&amp;tC=%23848484&amp;bC=%232f4f9c&amp;lC=%23dddddd" id="widgeturl" width="99%" height="320" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe>
+							<div style="font-style: italic; color:blue ; font-size:15px ; text-align: right;margin-top: -10px; ">
+								<span ><a href="https://www.windy.com/" target="_blank" >Xem thêm tại đây</a></span>
+							</div>		 -->
+							<a href="https://www.windy.com/" target="_blank">
+								<img src="uploads/image/dubaothoitiet1.jpg"style="width: 350px; height: 142px"></>	
+							</a>
+							
+						</div>							 
+					</div>				
+				</div>					
+			
+
+		
+			<!-- KINH DOANH -->
+			<div class="main-sidebar">
+				<div class="single-widget side-tags">				
+					<div class="form">
+						<div class="table-responsive">      
+							<table class="table table-bordered table-hover">                                    
+								<thead>
+									<tr style="background-color:#c6e7f3  ;color:#310cb6; text-align:center ;font-size:16px; font-weight: bold;line-height: 35px"> 
+										<!-- color:#333 ; font-size:15px; line-height: 30px; -->
+										<td colspan="4"> 
+											<span  >
+												K.hàng- T.phẩm ngày 
+												<%= moment(kdoanh[0].updatedAt).format(systemConfig.dateFormat) %>
+											</span>
+										</td> 
+									</tr>								  
+									</thead>
+
+								<thead>
+									<tr style="background-color:#e4f1fd ;text-align:center; color:#333 ; font-size:14px ;line-height: 25px"> 
+										<th>TT</th>
+										<th> Điện lực </th>										  
+										<th> Khách hàng </th>
+										<th> thương phẩm </th>
+									</tr>									  
+								</thead>
+								<tbody>       
+									<% for(let i=0 ; i < kdoanh.length ; i++ ) { %>
+										<tr style="text-align:center; color:#333 ; font-size:13px" >
+											<td><%= i+1 %></td>								
+											<td><%= kdoanh[i].name %></td> 
+											<td><%= kdoanh[i].khang %></td>    
+											<td><%= kdoanh[i].tpham %></td>    										   
+										</tr>
+									<% } %>
+									
+								</tbody>						
+							</table>
+							</div>
+					</div>
+				</div>
+			</div>		
+			<!-- PHỤ TẢI -->
+			<div class="main-sidebar">
+				<div class="single-widget side-tags">				
+					<div class="form">
+						<div class="table-responsive">      
+							<table class="table table-bordered table-hover">                                    
+								<thead>
+									<tr style="background-color:#cfd2d3  ;color:#310cb6; text-align:center ;font-size:16px; font-weight: bold;line-height: 35px"> 
+										<!-- color:#333 ; font-size:15px; line-height: 30px; -->
+										<td colspan="4"> 
+											<span  >
+												Phụ tải-Huy động nguồn ngày  
+												<%= moment(kdoanh[0].updatedAt).format(systemConfig.dateFormat) %>
+											</span>
+										</td> 
+									</tr>								  
+									</thead>
+
+								<thead>
+									<tr style="background-color:#e4f1fd ;text-align:center; color:#333 ; font-size:14px ;line-height: 25px"> 
+										<th>TT</th>
+										<th> Điện lực </th>										  
+										<th> Khách hàng </th>
+										<th> thương phẩm </th>
+									</tr>									  
+								</thead>
+								<tbody>       
+									<% for(let i=0 ; i < kdoanh.length ; i++ ) { %>
+										<tr style="text-align:center; color:#333 ; font-size:13px" >
+											<td><%= i+1 %></td>								
+											<td><%= kdoanh[i].name %></td> 
+											<td><%= kdoanh[i].khang %></td>    
+											<td><%= kdoanh[i].tpham %></td>    										   
+										</tr>
+									<% } %>
+									
+								</tbody>						
+							</table>
+							</div>
+					</div>
+				</div>
+			</div>
+			
+
+			<!-- CHUYE MUC KHÁC  -->
+			<div class="main-sidebar">
+				<div class="single-widget side-tags">	
+					<div class="list-group" id="list-tab" role="tablist">
+						<a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"> <i class="fa fa-list  service-icon"></i> &nbsp CHUYÊN MỤC KHÁC</a>							
+						<a class="list-group-item list-group-item-action"  data-toggle="list" href="#"><i class="fa fa-users  service-icon"></i> &nbsp&nbsp THƯ VIỆN SÁNG KIẾN</a>
+						<a class="list-group-item list-group-item-action"  data-toggle="list" href="#"><i class="fa fa-bar-chart  service-icon"></i>&nbsp&nbsp THƯ VIỆN ẢNH - VIDEO</a>							
+					</div> 
+				</div>	
+			</div>
+			</div>
+		</div>
+		
+	</div>
+</section>
+  

@@ -1,0 +1,110 @@
+<%- include('./../../helpers/selectbox') %>
+<%- include('./../../helpers/image') %>
+<% 
+    const collection = 'baiviet';
+    const linkPrefix = systemConfig.prefixAdmin + `/${collection}`;
+    const folderUpload = 'uploads' + `/${collection}/`;
+    const link_no_avatar = folderUpload +'no_avatar.png' ; 
+%>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <!--  neeus cos loix thi mow show ra -->
+            <% if (notify.err) { %>  
+                <div class="alert alert-danger role="alert"  >
+                    <span class="close-btn">&times;</span> 
+                   <%= notify.err %>
+                </div>
+             <% } %>
+             <!--  -->
+            <div class="panel-heading">
+                Form 
+            </div>
+            <div class="panel-body"> 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form" action="<%= linkPrefix %>/save" method="POST" enctype="multipart/form-data"> 
+                                
+                            <div class="form-group" >
+                                <label>Chọn chuyên mục</label>
+                                <select name="group_id" class="form-control" >
+                                    <%- selectboxHelper(dataGroup , data.group_id) %>                               
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Tên bài viết</label>
+                                <input class="form-control" name="name" value="<%= data.name %>" >
+                            </div>
+                          
+                            <div class="form-group">
+                                <label>Mô tả ngắn</label>
+                                <textarea class="form-control" name="title" rows="2"  id="title" > <%= data.title %></textarea>                                
+                             </div>
+                            
+                            <div class="form-group">
+                                <label>Nội dung</label>
+                                <textarea class="form-control" name="content" rows="2"  id="editor1" > <%= data.content %></textarea>                                
+                             </div>
+                       
+                            <div class="form-group">
+                                <label>Trạng thái hiện thị</label>
+                                <select name="status" class="form-control" >
+                                    <!-- <option value="Novalue">Chọn trạng thái</option> -->
+                                    <option value="Active"  <%= (data.status == "Active") ? 'selected="selected"' : '' %> >Active</option>
+                                    <option value="Inactive"  <%= (data.status == "Inactive") ? 'selected="selected"' : '' %> >Inactive</option>                                    
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                             <label>Vị trí hiện thị</label>
+                                 <select name="position" class="form-control" >
+                                     <!-- <option value="Novalue">Chọn vị trí</option> -->
+                                     <option value="Top"  <%= (data.position == "Top") ? 'selected="selected"' : '' %> >Top</option>
+                                     <option value="None"  <%= (data.position == "None") ? 'selected="selected"' : '' %> >None</option>
+                                 </select>
+                             </div>
+
+                             <div class="form-group">
+                                <label>Thứ tự hiển thị show</label>
+                                <input class="form-control" type="number" name="order" value="<%= data.order %>" >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label> File upload</label>
+                                <input class="form-control" type="file" name="fileUpload"   >
+                            </div>
+                             
+                            <% if( data.name !==''  ) { %>
+                                <div>
+                                    <td style="text-align:center;" >
+                                        <%- imageHelper(folderUpload, data.fileUpload, 'style="width: 80px; margin:auto"') %> 
+                                     </td>    
+                                </div>
+                            <% } else { %>
+                                <div class="form-group">
+                                    <td style="text-align:center; width:50px; margin: auto" >
+                                        <img src="<%= link_no_avatar %>" style="width: 80px; margin: auto">  
+                                    </td>
+                                </div>
+                            <% } %>
+                        
+                            </br>                                                     
+
+                            <div>
+                                <input class="form-control" type="hidden" name="id" value="<%= data.id %>"   >
+                                <input class="form-control" type="hidden" name="group_name" value="<%= data.group_name %>"  >
+                                <input class="form-control"  type="hidden" name="image_old" value="<%= data.fileUpload %>"  />  
+                                <button type="submit" class="btn btn-primary">Submit </button>
+                                <a type="button" href="<%= linkPrefix %>" class="btn btn-default">Cancel</a>                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+

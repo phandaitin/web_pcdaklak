@@ -1,0 +1,17 @@
+
+
+<% 
+   statusHelper = (linkPrefix, status , id) =>{
+   let link = linkPrefix +'/change-status/'+id +'/'+ status ;
+   let xhtml = '';
+   if(status =='Active'){
+      xhtml = '<span class="btn btn-success btn-sm">Active</span>'
+   }else if(status =='Inactive') { 
+      xhtml = '<span class="btn btn-warning btn-sm">Inactive</span>'
+   }
+   return `
+      <a href="${link}"> ${xhtml}</a>
+   `
+   }
+%>
+ 

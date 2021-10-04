@@ -1,0 +1,36 @@
+
+<%  
+    const collection1 = 'auth/login/';     
+    const collection2 = 'auth/logout/';     
+    const linkLogin = systemConfig.prefixAdmin + `/${collection1}`;
+    const linkLogout = systemConfig.prefixAdmin + `/${collection2}`;
+%>
+
+<div class="login-panel panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title" style="text-align:center">Please Sign In or <a href="<%= linkLogout %>"  style ="color: red;"> Logout </a></h3>
+    </div>
+    <div class="panel-body">        
+         <% if (notify.err) { %>  
+            <div class="alert alert-danger role=alert"  >
+                <span class="close-btn">&times;</span> 
+               <%= notify.err %>
+            </div>
+         <% } %>
+        <form role="form" action="<%= linkLogin %>" method="POST">
+            <fieldset>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Username" name="user" value="" >
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" placeholder="Password" name="pass" value="" >
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Login </button>
+                   
+                </div>
+            </fieldset>
+        </form>
+        
+    </div>
+</div>

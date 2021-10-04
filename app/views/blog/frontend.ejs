@@ -1,0 +1,36 @@
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>    
+     <%- include('./elements/head')%>
+ </head>
+ <body>
+    <% if(preloader == true) { %>  
+        <%- include('./elements/Preloader')%>	        
+    <% } %>  
+
+    <header class="header" >      
+        <% if(banner == true) { %>  
+            <%- include('./elements/banner-top')%>	
+        <% } %>           
+        <% if(menu == true) { %>  
+            <%- include('./elements/menu')%>	       
+        <% } %>           
+        <% if(menu1 == true) { %>  
+            <%- include('./elements/menu1')%>	       
+        <% } %>           
+        
+    </header> 
+                    
+        <%- body %>
+                    
+        
+    
+    <%- include('./elements/footer')%>
+    <%- include('./elements/script')%>
+
+    
+ </body>
+ </html>
+  
+ 

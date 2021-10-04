@@ -1,0 +1,136 @@
+<% 	
+	collection = 'bai-viet-search';
+	const linkPrefix = systemConfig.prefixBlog + `/${collection}`;
+%>
+<div class="topbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-5 col-12" style="justify-content: center;">
+                <!-- Contact -->
+                <ul class="top-link" style="color: #4C66BF; font-size:16px; font-family: arial;">
+                    <i class="fa fa-phone"></i> Tổng đài chăm sóc khách hàng:
+                    <span style="color: #e45f48; " >                        
+                       <strong>  19001909  </strong>
+                    </span>
+                   
+                    
+                </ul>
+                <!-- End Contact -->
+            </div>
+            <div class="col-lg-3 col-md-7 col-12">
+                 
+            </div>
+            
+
+             <div class="col-lg-3 col-md-7 col-12">
+                <!-- Top Contact -->
+                <div class="top-link-right">
+                    <form method="get" action="<%= linkPrefix %>">
+                        <div class="input-group"  style="width: 100%">
+                            <input type="text" name="keyword" class="form-search-tin">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit" style="height: 30px">
+                                  <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+           
+                <!-- End Top Contact -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header-inner">
+    <div class="container-fluid">
+        <div class="inner">
+            
+            <div class="row">
+                <div class="col-lg-1 col-md-3 col-12">                    
+                </div>
+                <div class="col-lg-1 col-md-3 col-12">               
+                    <a href="/">
+                        <img src="/uploads/image/logo/PC12_logo.png" 
+                            style="width:100px; margin: 5px auto;" alt="" />
+                    </a>                     
+                </div>
+
+                <div class="mobile-nav">                    
+                </div>
+
+                <div class="col-lg-10 col-md-9 col-12" style="text-align:left;">
+                <!-- Main Menu -->
+                <div class="main-menu">
+                    <nav class="navigation">
+                        <ul class="nav menu">                            
+                            <li><a href="/gioi-thieu"></i>GIỚI THIỆU </a></li>
+                            <li> <a href="">TIN TỨC-SỰ KIỆN<i class="icofont-rounded-down"></i></a>
+                                <ul class="dropdown">                                        
+                                    <% for(let i =0 ; i< chuyenmucMenu.length ; i++) { %>
+                                        <!-- <li><a href="/<%= chuyenmucMenu[i].slug %>/<%= chuyenmucMenu[i].id %> " ><%= chuyenmucMenu[i].name %></a></li> -->
+                                        <!-- <li><a href="/chuyenmuc/<%= chuyenmucMenu[i].id %> " ><%= chuyenmucMenu[i].name %></a></li> -->
+                                        <li><a href="/tin-tuc-tong-hop" ><%= chuyenmucMenu[i].name %></a></li>
+                                    <% } %>                                      
+                                </ul>
+                            </li>   
+                            
+                            <li> <a href="/">ĐIỀU HÀNH CÔNG TÁC<i class="icofont-rounded-down"></i></a>
+                                <ul class="dropdown">                                        
+                                    <li><a href="#" target="blank">
+                                        Lịch công tác lãnh đạo
+                                        </a>
+                                    </li>
+                                    <li><a href="/thong-bao-moi-hop" target="blank">
+                                        Thông báo mời họp
+                                        </a>
+                                    </li>                                    
+                                    <li><a href="/phuong-thuc-van-hanh" target="blank">
+                                        Phương thức vận hành
+                                        </a>
+                                    </li>                                    
+                                    <li><a href="/lich-dieu-dong-xe" target="blank">
+                                        Điều động phương tiện
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </li>   
+
+                            <li> <a href="/">CHUYỂN ĐỐI SỐ<i class="icofont-rounded-down"></i></a>
+                                <ul class="dropdown">                                        
+                                    <li><a href="https://chuyendoisodoanhnghiep.info" target="blank">
+                                        CDS trong doang nghiệp
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </li>   
+
+                        
+                            
+                            <li><a href="#">ĐIỆN MẶT TRỜI <i class="icofont-rounded-down"></i></a>
+                                <ul class="dropdown"> 
+                                    <li><a href="https://cskh.cpc.vn/frm_NLTT.aspx" target="blank">
+                                        Điện mặt trời trên mái nhà
+                                        </a>
+                                    </li>   
+                                    <li><a href="https://cskh.cpc.vn/frm_NLTT_VBPL" target="blank">
+                                        Văn bản pháp lý
+                                        </a>
+                                    </li>  
+                                </ul> 
+                            </li>
+                            <li><a href="https://cskh.cpc.vn/frm_Lienhe.aspx"  target="blank">LIÊN HỆ</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </nav>
+                </div>
+                <!--/ End Main Menu -->
+                </div>
+
+                
+            </div>         
+        </div>
+    </div>
+</div>

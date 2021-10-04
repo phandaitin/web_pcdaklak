@@ -1,0 +1,81 @@
+
+
+		<!-- jquery Min JS -->
+        <script src="blog/js/jquery.min.js"></script>
+		<!-- jquery Migrate JS -->
+		<script src="blog/js/jquery-migrate-3.0.0.js"></script>
+		<!-- jquery Ui JS -->
+		<script src="blog/js/jquery-ui.min.js"></script>
+		<!-- Easing JS -->
+        <script src="blog/js/easing.js"></script>
+		<!-- Color JS -->
+		<script src="blog/js/colors.js"></script>
+		<!-- Popper JS -->
+		<script src="blog/js/popper.min.js"></script>
+		<!-- Bootstrap Datepicker JS -->
+		<script src="blog/js/bootstrap-datepicker.js"></script>
+		<!-- Jquery Nav JS -->
+        <script src="blog/js/jquery.nav.js"></script>
+		<!-- Slicknav JS -->
+		<script src="blog/js/slicknav.min.js"></script>
+		<!-- ScrollUp JS -->
+        <script src="blog/js/jquery.scrollUp.min.js"></script>
+		<!-- Niceselect JS -->
+		<script src="blog/js/niceselect.js"></script>
+		<!-- Tilt Jquery JS -->
+		<script src="blog/js/tilt.jquery.min.js"></script>
+		<!-- Owl Carousel JS -->
+        <script src="blog/js/owl-carousel.js"></script>
+		<!-- counterup JS -->
+		<script src="blog/js/jquery.counterup.min.js"></script>
+		<!-- Steller JS -->
+		<script src="blog/js/steller.js"></script>
+		<!-- Wow JS -->
+		<script src="blog/js/wow.min.js"></script>
+		<!-- Magnific Popup JS -->
+		<script src="blog/js/jquery.magnific-popup.min.js"></script>
+		<!-- Counter Up CDN JS -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="blog/js/bootstrap.min.js"></script>
+		<!-- Main JS -->
+		<script src="blog/js/main.js"></script>
+
+		<!-- slider điện lực tín thêm -->	 
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="blog/js/infiniteslidev2.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.scroll1').infiniteslide({
+					speed: 30,
+					direction: 'left'			
+				})
+				$('.scroll2').infiniteslide({
+					speed: 30,
+					direction: 'right'			
+				})
+				$('.scroll3').infiniteslide({
+					speed: 30,
+					direction: 'up'			
+				})
+			})
+
+
+			// lượt truy cập
+			var n = localStorage.getItem('on_load_counter');			
+			if (n === null) {
+				n = 0;
+			}
+			n++;
+			localStorage.setItem("on_load_counter", n);			
+			nums = n.toString().split('').map(Number);
+			document.getElementById('CounterVisitor').innerHTML = '';
+			for (var i of nums) {
+			document.getElementById('CounterVisitor').innerHTML += '<span class="counter-item">' + i + '</span>';
+			}
+
+
+
+
+		</script>
+		<!-- slider điện lực tín thêm -->	

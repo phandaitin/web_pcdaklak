@@ -1,0 +1,675 @@
+ 
+ <% 
+ const folderUploads   ='uploads/baiviet/'
+ let linkIndex       = '/' + systemConfig.prefixBlog + '/dienluctructhuoc/' ; 
+ %>
+		 
+<section class="slider">
+	<div class="hero-slider">		
+		<div class="single-slider" style="background-image:url('uploads/slider/19001909.jpg')">	
+		</div>
+		<div class="single-slider" style="background-image:url('uploads/slider/hcc.png')">			
+		</div>
+		<div class="single-slider" style="background-image:url('uploads/slider/sddhq.jpg')">	
+		</div>
+		<div class="single-slider" style="background-image:url('uploads/slider/cskh.jpg')">	
+		</div>
+		 
+	</div>
+</section>
+  
+<!-- CÁC DỊCH VỤ NUT TRÒN -->
+	<section class="Feautes section">
+		<div class="container">
+			 
+			<div class="row" style="margin-top:20px">
+				<div class="col-lg-3 col-md-6  col-sm-12">
+					<div class="signle-icon-tin">
+						<a href="https://cskh.cpc.vn/frm_DichVuTrucTuyen.aspx" target="_blank">
+							<img src="uploads/anhtron/dv_1.png"  >
+						</a>
+						<div class="span-tin" style="text-align:center;font-weight: bold; font-size: 16px ;color:#4b35c6 ;		padding-top:15px;"> 													 
+							<span > DỊCH VỤ TRỰC TUYẾN </span>
+						</div>
+						 
+					</div>
+					<!-- End Single features -->
+				</div>
+
+				<div class="col-lg-3 col-md-6  col-sm-12">
+					<div class="signle-icon-tin">
+
+						<a href="https://cskh.cpc.vn/frm_ThanhToanTrucTuyen.aspx" target="_blank">
+							<img src="uploads/anhtron/dv_2.png"  >
+						</a>
+						<div class="span-tin" style="text-align:center;font-weight: bold; font-size: 16px ;color:#4b35c6 ;		padding-top:15px;"> 													 
+							<span > THANH TOÁN TRỰC TUYẾN </span>
+						</div>
+					</div>
+					<!-- End Single features -->
+				</div>
+				<div class="col-lg-3 col-md-6  col-sm-12">
+					<div class="signle-icon-tin">
+						<a href="https://dichvucong.gov.vn/p/home/dvc-trang-chu.html" target="_blank">
+							<img src="uploads/anhtron/dv_3.png">
+						</a>
+						<div class="span-tin" style="text-align:center;font-weight: bold; font-size: 16px ;color:#4b35c6 ;		padding-top:15px;"> 						 
+							<span > CỔNG DỊCH VỤ CÔNG</span>
+						</div>
+					</div>
+					<!-- End Single features -->
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12">
+					<div class="signle-icon-tin">
+						<a href="https://uoctinhdiennang.evn.com.vn/"  target="_blank">
+							<img src="uploads/anhtron/dv_4.jpg"  ></a>
+						<div class="span-tin" style="text-align:center;font-weight: bold; font-size: 16px ;color:#4b35c6 ;		padding-top:15px;"> 													 
+							<span > ƯỚC TÍNH HÓA ĐƠN</span>
+						</div>						 
+					</div>
+					<!-- End Single features -->
+				</div>
+			</div>
+		</div>
+	</section>
+	
+			
+
+		 
+<!--1 ẢNH LỚN 4 ẢNH NHỎ -->
+<section class="news-single section">
+	<div class="container">
+		<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px"  >
+			<H6 style="color: #d40d13; font-weight:bold; font-family: 'Arial' ; ">
+				<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;					 
+				TIN MỚI NHẤT 
+			<H6>
+		</div>	
+		<div class="row"  >  
+		<!-- 1 ẢNH LỚN 50%-->
+			<div class="col-lg-6 col-md-12 col-12">
+				<div class="single-main-tin-right-0 image-gallery">
+					<div class="single-image ">
+						<a href="/bai-viet/<%= baivietNew[0].id %> " >
+							<img src="<%= folderUploads + baivietNew[0].fileUpload %>" alt="imageError" style="width:100%; height:410px ;" >				
+						</a>			
+						
+						<div class="name-tin" >		
+												
+							<h6 style="color:#fff; font-family: 'Arial' ;padding: 10px ;"><%= baivietNew[0].name.replace(/(<([^>]+)>)/igm,"").substr(0, 120) %>...</h6>						
+						</div>					
+
+					</div>
+				</div>
+			</div>
+
+			
+		<!-- 4 ẢNH LỚN NHỎ 2 DÒNG 50%-->
+			<div class="col-lg-3 col-md-6 col-12">
+				<!-- <div class="row">	DÒNG 1 2 ẢNH -->				
+				<% for( let i = 1; i<= 2 ; i ++ )  {%>
+				<div class="single-main-tin-left-5 image-gallery">
+					<div class="single-image"> 
+						<a href="/bai-viet/<%= baivietNew[i].id %> " >
+							<img src="<%= folderUploads + baivietNew[i].fileUpload %>" 	alt="imageError"  style="width:300px; height:200px; width: 100% ;">
+						</a>
+
+						<div class="name-tin">
+						 
+							<span style="color:#fff; font-family: 'Arial' ;  font-size: 15px;padding-left:10px "><%= baivietNew[i].name.replace(/(<([^>]+)>)/igm,"").substr(0,60) %></span>
+						</div>
+					</div>
+				</div>
+				<% }%>
+			</div>	
+		
+				<!-- <div class="row">	DÒNG 1 2 ẢNH -->				
+			<div class="col-lg-3 col-md-6 col-12">
+				<% for( let i = 3; i <= 4 ; i ++ )  {%>
+				<div class="single-main-tin-left-5 image-gallery">
+					<div class="single-image">				
+						<a href="/bai-viet/<%= baivietNew[i].id %> " >
+							<img src="<%= folderUploads + baivietNew[i].fileUpload %>" 	alt="imageError"  style="width:300px; height:200px; width: 100% ; ">
+						</a>
+							<div class="name-tin">
+								<span style="color:#fff; font-family: 'Arial' ;  font-size: 15px; margin-left:10px  ;"><%= baivietNew[i].name.replace(/(<([^>]+)>)/igm,"").substr(0, 60) %></span>
+							</div>
+					</div>
+				</div>
+				<% }%>				 
+			</div>
+			 
+		</div>
+	</div>	
+
+
+
+	<!--KHÁCH HÀNG CẦN BIẾT 2 DÒNG 2 CỘT-->
+	<div class="container">
+		<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px"  >
+			<H6 style="color: #d40d13; font-weight:bold; font-family: 'Arial' ; ">
+				<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;					 
+				KHÁCH HÀNG CẦN BIẾT
+			<H6>
+		</div>
+	</div>
+		 
+</section>
+
+<!-- KHÁCH HÀNG CẦN BIẾT 2 DÒNG/3 CỘT -->
+	<section class="blog section" id="blog">	 
+		<div class="container">
+		<div class="row"> 		
+			<div class="col-lg-4 col-sm-12">
+				<div class="single-news-tin6">						
+						<div class="news-content-tin6" style="margin-bottom: 10px;">	
+							<a href="https://cskh.cpc.vn/frm_LichNgungCungCapDien_KhuVuc.aspx" target="_blank">					
+								<img src="uploads/image/kh_canbiet/kh_canbiet_ngung_ccd.png" style=" height:80px;  width:100%;">
+							</a>
+						</div>
+				</div>
+				
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				<div class="single-news-tin6">						
+					<div class="news-content-tin6" style="margin-bottom: 10px;">	
+							<a href="https://cskh.cpc.vn/frm_Dangnhap.aspx?ReturnUrl=%2ffrm_LichGhiDien.aspx" target="_blank">							
+								<img src="uploads/image/kh_canbiet/kh_canbiet_lich_gcs.png" style="width:100%; height:80px;  ">
+							</a>
+						</div>
+				</div>
+			</div>
+			<div class="col-lg-4  col-sm-12">
+				<div class="single-news-tin6">											
+					<div class="news-content-tin6" style="margin-bottom: 10px;">						
+							<a href="https://cskh.cpc.vn/frm_Dangnhap.aspx?ReturnUrl=%2ffrm_TracuuHDDT.aspx" target="_blank">							
+								<img src="uploads/image/kh_canbiet/kh_canbiet_tracuu_hddt.png" style="width:100%; height:80px;">
+							</a>
+						</div>
+				</div>
+			</div>			
+		</div>
+
+		<div class="row" > 		<!-- dòng 2 3 ảnh cho những điều KH cần biết -->
+			<div class="col-lg-4 col-sm-12">
+				<div class="single-news-tin6">						
+						<div class="news-content-tin6" style="margin-bottom: 10px;">
+							<a href="https://cskh.cpc.vn/frm_DichVuTrucTuyen.aspx"target="_blank">
+								<img src="uploads/image/kh_canbiet/kh_canbiet_thutuc_cdm.png" style="width:100%; height:80px; ">
+							</a>
+						</div>
+				</div>
+				
+			</div>
+			<div class="col-lg-4  col-sm-12">
+				<div class="single-news-tin6">						
+					<div class="news-content-tin6" style="margin-bottom: 10px;">												
+							<a href="https://cskh.cpc.vn/frm_TheoDoiTienDoCapDien.aspx" target="_blank">
+								<img src="uploads/image/kh_canbiet/kh_canbiet_theodoitiendo_cd.png" style="width:100%; height:80px;  ">
+							</a>	
+						</div>
+				</div>
+			</div>
+			<div class="col-lg-4  col-sm-12">
+				<div class="single-news-tin6">						
+						<div class="news-content-tin6" style="margin-bottom: 10px;">					
+							<a href="https://cskh.cpc.vn/frm_DichVuMoi.aspx" target="_blank">					
+								<img src="uploads/image/kh_canbiet/kh_canbiet_ungdung_cskh.png" style="width:100%; height:80px; ">
+							</a>
+						</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+	</section>
+ <!-- KHÁCH HÀNG CẦN BIẾT 2 DÒNG/3 CỘT -->
+		
+	
+	 
+ 	<!--NO TIEN MAT-->
+	 <section class="schedule" style="padding-top: 15px;">
+		<div class="container">
+			<!-- <div class="schedule-inner"> -->
+				<div class="row">
+					<div class="col-lg-2 col-md-4 col-sm-6" > 
+						<div class="single-schedule" style="text-align:center; margin-bottom: 10px; "> 
+							<a href="https://cskh.cpc.vn/frm_KhuyenMai?intDocId=6" target="_blank">
+								<img src="uploads/notienmat/kenh_tt1.png"  style="width: 180px; height:120px; ">				 
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-4 col-sm-6"> 
+						<div class="single-schedule"  style="text-align:center  "> 
+							<a href="https://cskh.cpc.vn/frm_KhuyenMai.aspx?intDocId=3"  target="_blank">						
+								<img src="uploads/notienmat/kenh_tt2.png"  style="width: 180px; height:120px">				 
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-sm-6 ">
+						<div class="single-schedule" style="text-align:center  "> 
+							<a href="https://cskh.cpc.vn/frm_KhuyenMai.aspx?intDocId=7"  target="_blank"> 
+							<img src="uploads/notienmat/kenh_tt3.png"  style="width: 180px; height:120px">				 
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-4 col-sm-6 ">
+						<div class="single-schedule" style="text-align:center  "> 
+							<a href="https://cskh.cpc.vn/frm_KhuyenMai.aspx?intDocId=4" target="_blank">
+								<img src="uploads/notienmat/kenh_tt4.png"  style="width: 180px; height:120px">				 
+							</a>	
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-4 col-sm-6 ">
+						<div class="single-schedule" style="text-align:center  "> 
+							<a href="https://khuyenmai.sacombank.com/chuong-trinh-khuyen-mai/ngan-hang-dien-tu/combo-40-1#page01"  target="_blank">
+								<img src="uploads/notienmat/kenh_tt5.png"  style="width: 180px; height:120px">				 
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-sm-6 ">
+						<div class="single-schedule" style="text-align:center  "> 
+							<a href="#">							
+								<img src="uploads/notienmat/kenh_tt6.jpg"  style="width: 180px; height:120px">				 
+							</a>
+						</div>
+					</div>
+ 
+			</div>
+		</div>
+	</section>
+	<!--NO TIEN MAT-->
+
+	<!--TIN TIÊU ĐIỂM 1 DÒNG 4 CỘT-->
+	<div class="container">
+		<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px"  >
+			<H6 style="color: #d40d13; font-weight:bold; font-family: 'Arial' ; ">
+				<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;					 
+				TIN TIÊU ĐIỂM
+			<H6>
+		</div>	
+		<div class="row" style="padding-top: 15px">  <!-- tin tieu diểm 1 dòng 3 cột -->
+			<% for( let i = 0; i<  baivietTieudiem.length ; i ++ )  {%>
+				<div class="col-lg-3 col-md-6 col-sm-12">	
+					<div class="single-post">						
+						<div class="image-tin-350200">
+							<a href="/tin-tieu-diem/<%= baivietTieudiem[i].id %> " >
+								<img src="<%= folderUploads + baivietTieudiem[i].fileUpload %>"  style="width:100% ;margin-top: 10px" >											
+							</a>
+
+						</div>
+						<div class="content">									 				
+							<h6 style="color: #2905A1; font-family: 'Arial' ; font-weight: bold; font-size: 16px; padding: 15px 0px 5px 0px "     >
+								<a href="/tin-tieu-diem/<%= baivietTieudiem[i].id %> "><i class="fa fa-angle-double-right" aria-hidden="true" style="color:red; font-weight: bold;"></i> 
+									<%= baivietTieudiem[i].name.replace(/(<([^>]+)>)/igm,"").substr(0,115) %></a>
+							</h6>
+							<div class="meta-tin-tieudiem" >	
+								<span class="date"><i class="fa fa-calendar"></i>   <%= moment(baivietTieudiem[i].updatedAt).format(systemConfig.dateFormat) %> | <%= baivietTieudiem[i].seen %> views </span>
+							</div> 
+							<span style="font-family: 'Arial';font-size:15px; color: #333 ; line-height:18px " >
+								<%= baivietTieudiem[i].title.replace(/(<([^>]+)>)/igm,"").substr(0,185) %>
+							</span>
+						</div>
+							
+					</div>
+
+				</div>
+
+				<%  } %>
+			 
+		</div>
+	</div>  
+	 
+	<!--VIDEO CLIP-->
+	<div class="container">
+		<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px"  >
+			<H6 style="color: #d40d13; font-weight:bold; font-family: 'Arial' ; ">
+				<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;					 
+				VIDEO - CLIP
+			<H6>
+		</div>	
+	</div>	 
+	<!-- <div class="container">  
+		<div class="row"  style="padding-top:15px">
+			<% for (let i=0 ; i <=3 ; i++) { %>		
+				<div class="col-lg-3 col-md-6 col-sm-12"  >							
+					<div class="row" >
+								<div  class="col-lg-5 col-4">					
+									<iframe width="150" height="120"  
+										src="https://www.youtube.com/embed/<%= video[i].idvideo %>"
+										title="YouTube video player" frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; 
+										encrypted-media; gyroscope; picture-in-picture" 
+										>
+									</iframe>
+								</div>
+						
+								<div  class="col-lg-7 col-8">		
+									<div class="name-video-tin" style="color: #2905A1" >					
+										<%= video[i].name.replace(/(<([^>]+)>)/igm,"").substr(0, 80) %>
+									</div>
+									<div class="meta-tin-video"  style="text-align:left;"> 
+										<span class="date"><i class="fa fa-calendar"></i>&nbsp<%= moment(video[i].updatedAt).format(systemConfig.dateFormat) %> </span>								
+									</div> 					
+								</div>		
+
+					</div>	 
+				</div>
+			<% } %>
+ 
+
+		</div>	 
+		 <div class="row"  style="padding-top:15px">
+			<% for (let i=4 ; i <=7 ; i++) { %>		
+				<div class="col-lg-3 col-md-6 col-sm-12"  >							
+					<div class="row" >
+								<div  class="col-lg-5 col-4">					
+									<iframe width="150" height="120"  
+										src="https://www.youtube.com/embed/<%= video[i].idvideo %>"
+										title="YouTube video player" frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; 
+										encrypted-media; gyroscope; picture-in-picture" 
+										>
+									</iframe>
+								</div>
+						
+								<div  class="col-lg-7 col-8">		
+									<div class="name-video-tin" style="color: #2905A1" >					
+										<%= video[i].name.replace(/(<([^>]+)>)/igm,"").substr(0, 80) %>
+									</div>
+									<div class="meta-tin-video"  style="text-align:left;"> 
+										<span class="date"><i class="fa fa-calendar"></i>&nbsp<%= moment(video[i].updatedAt).format(systemConfig.dateFormat) %> </span>								
+									</div> 					
+								</div>		
+
+					</div>	 
+				</div>
+			<% } %>
+		</div>	 
+
+	</div>    -->
+							 
+				 
+						
+			 
+	<!--slide 15 HINHF DDIENJ LUC-->	
+	<div class="container">		
+		<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px"  >
+			<H6 style="color: #d40d13; font-weight:bold; font-family: 'Arial' ; ">
+				<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;					 
+				
+					ĐIỆN LỰC TRỰC THUỘC
+				 
+			<H6>
+		</div>
+	</div>
+	<div class="container">		
+		<div class="row">  
+			<div class="col-lg-12">
+				<ul class="scroll1">					
+					<li>
+						<a href="/dien-luc-truc-thuoc" style="text-decoration: none" title="Điện lực Bắc Buôn Ma Thuột" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/hinh_dluc/pc12aa.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>														
+                        </a>
+					</li>
+					<li>
+						<a href="/dien-luc-truc-thuoc" style="text-decoration: none" title="Điện lực Krông Pắc" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/hinh_dluc/pc12aa.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>											
+                        </a>
+					</li>
+					<li>
+						<a href="/dien-luc-truc-thuoc" style="text-decoration: none" title="Điện lực Nam Buôn Ma Thuột" target="_blank" rel="noopener noreferrer">
+							<img src="uploads/image/hinh_dluc/pc12cc.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>											                            
+                        </a>
+					</li>
+					<li>
+						<a href="/dien-luc-truc-thuoc" style="text-decoration: none" title="Điện lực Buôn Hồ" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/hinh_dluc/pc12dd.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>												
+                        </a>
+					</li>
+					<li>
+						<a href="/dien-luc-truc-thuoc" style="text-decoration: none" title="Điện lực Buôn Đôn" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/hinh_dluc/pc12aa.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>												
+                        </a>
+					</li>
+					<li>
+						<a href="/dien-luc-truc-thuoc" style="text-decoration: none" title="Điện lực CưMgar" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/hinh_dluc/pc12gg.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>												
+                        </a>
+					</li>
+					<li>
+						<a href="/dien-luc-truc-thuoc" style="text-decoration: none" title="Điện lực CuKuin" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/hinh_dluc/pc12gg.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>											
+                        </a>
+					</li>
+					<li>
+						<a href="/dien-luc-truc-thuoc" style="text-decoration: none" title="Điện lực EaHleo" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/hinh_dluc/pc12ii.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>												
+                        </a>
+					</li>
+					<li>
+						<a href="/dien-luc-truc-thuoc"  style="text-decoration: none" title="Điện lực Krông Năng" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/hinh_dluc/pc12jj.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>												
+                        </a>
+					</li>
+
+					<li>
+						<a href="/dien-luc-truc-thuoc" style="text-decoration: none" title="Điện lực EaKar" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/hinh_dluc/pc12jj.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>																	
+                        </a>
+					</li>
+					<li>
+						<a href="/dien-luc-truc-thuoc" style="text-decoration: none" title="Điện lực Krông Ana" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/hinh_dluc/pc12ll.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>																
+                        </a>
+					</li>
+					<li>
+						<a href="/dien-luc-truc-thuoc" style="text-decoration: none" title="Điện lực EaSup" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/hinh_dluc/pc12mm.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>					
+                        </a>
+					</li>
+					<li>
+						<a href="/dien-luc-truc-thuoc" style="text-decoration: none" title="Điện lực Krông Bông" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/hinh_dluc/pc12nn.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>																						
+                        </a>
+					</li>
+					<li>
+						<a href="/dien-luc-truc-thuoc" style="text-decoration: none" title="Điện lực Lắk" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/hinh_dluc/pc12nn.jpg" class="img-responsive" style="width:300px; height:200px ;padding:15px 5px"/>												
+                        </a>
+					</li> 
+				</ul>	 				
+			</div>
+		</div> 
+	</div>  
+	
+	<!-- CÔNG TY ĐIỆN LỰC BẠN -->	
+	<div class="container">
+		<div class="chuyenmuc-tin" style="margin-left:-7px; margin-right: -7px"  >
+			<H6 style="color: #d40d13; font-weight:bold; font-family: 'Arial' ; ">
+				<i class="fa fa-newspaper-o" aria-hidden="true"></i>	 &nbsp;					 
+				LIÊN KẾT WEB
+			<H6>
+		</div>
+		<div class="row">  
+			<div class="col-lg-12">
+				<ul class="scroll2">	
+					<li>
+						<a href="https://cpc.vn/" style="text-decoration: none" title="Tổng Công ty Điện lực miền Trung" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/cpc_logo.png" class="img-responsive" style="padding:15px 0px"/>							
+                        </a>
+					</li>		
+					<li>
+						<a href="https://pcquangbinh.cpc.vn/" style="text-decoration: none" title="Công ty Điện lực Quảng Bình" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/PC01_logo.png" alt="" class="img-responsive" />
+                        </a>						
+					</li>
+					<li>
+                        <a href="https://pcquangtri.cpc.vn/" style="text-decoration: none" title="Công ty Điện lực Quảng Trị" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/PC02_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pcthuathienhue.cpc.vn/" style="text-decoration: none" title="Công ty Điện lực Thừa Thiên Huế" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/PC03_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pcdanang.cpc.vn/" style="text-decoration: none" title="Công ty TNHH MTV Điện lực Đà Nẵng" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/PP_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pcquangnam.cpc.vn/" style="text-decoration: none" title="Công ty Điện lực Quảng Nam" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/PC05_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pcquangngai.cpc.vn/" style="text-decoration: none" title="Công ty Điện lực Quảng Ngãi" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/PC06_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pcbinhdinh.cpc.vn/" style="text-decoration: none" title="Công ty Điện lực Bình Định" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/PC07_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pcphuyen.cpc.vn/" style="text-decoration: none" title="Công ty Điện lực Phú Yên" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/PC08_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pckhanhhoa.cpc.vn/" style="text-decoration: none" title="Công ty CP Điện lực Khánh Hòa" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/PQ_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pckontum.cpc.vn/" style="text-decoration: none" title="Công ty Điện lực Kon Tum" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/PC11_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pcgialai.cpc.vn/" style="text-decoration: none" title="Công ty Điện lực Gia Lai" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/PC10_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pcdaklak.cpc.vn/" style="text-decoration: none" title="Công ty Điện lực Đăk Lăk" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/PC12_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pcdaknong.cpc.vn/" style="text-decoration: none" title="Công ty Điện lực Đăk Nông" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/PC13_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://etc.cpc.vn/" style="text-decoration: none" title="Công ty TNHH MTV thí nghiệm Điện miền Trung" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/ETC_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://pc3invest.cpc.vn/" style="text-decoration: none" title="Công ty Cổ phần đầu tư Điện lực 3" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/IJSC_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://itc.cpc.vn/" style="text-decoration: none" title="Công ty CNTT Điện lực miền trung" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/cpcit_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://emec.cpc.vn/" style="text-decoration: none" title="Trung tâm sản xuất thiết bị đo điện tử Điện lực miền Trung" target="_blank" rel="noopener noreferrer">
+                            <img src="uploads/image/logo/emec_logo.png" alt="" class="img-responsive" />
+                        </a>
+                    </li>					
+				</ul>	 				
+			</div>
+		</div> 
+	</div> 	 
+ 	<!-- AN TOÀN SỬ DỤNG ĐIỆN TRONG NHÂN DÂN-->
+	<section class="portfolio section" style="padding-bottom: 15px;">
+		<div class="container">
+			<div class="row"> 
+				<div class="col-lg-12">
+					<div class="section-title-tin">
+						<h4 style="color:#3030e0"; font-weight:bold;>AN TOÀN SỬ DỤNG ĐIỆN TRONG NHÂN DÂN</h4>							
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12 col-12">
+					<div class="owl-carousel portfolio-slider">
+						<div class="single-pf">
+							<img src="uploads/antoandien/at1.jpg"  style="width: 300px ; height: 200px">				
+							<br><span style="color:#333; font-family: 'Arial' ; font-size: 16px; line-height: 20px; margin: 15px"> Không đứng dưới cột điện khi trời mưa hoặc lúc có giông sét.</span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at2.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ;  font-size: 16px; line-height: 20px; margin: 15px"> Không tự ý leo lên cột điện hoặc vượt qua hàng rào trạm điện, chạm người vào dây chằng cột, dây nối đất, thùng điện kế, thùng cầu dao… để đề phòng điện giật do rò điện khi trời mưa, giông, bão </span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at3.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ; font-size: 16px; line-height: 20px; margin: 15px"> Không tự ý tháo dỡ, sửa chữa các kết cấu của công trình điện.  </span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at4.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ;  font-size: 16px; line-height: 20px; margin: 15px"> Không di chuyển, đi lại bằng tàu, thuyền, bè .v.v.. trong vùng ngập, lụt có đường dây điện sát với mặt nước để tránh bị phóng điện gây tai nạn. Cấm buộc gia súc và thuyền bè vào cột điện để đề phòng cột bị gãy đổ và bị điện giật. </span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at5.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ;  font-size: 16px; line-height: 20px; margin: 15px"> Không mang vác, lắp dựng cây, cột bằng kim loại, cột ăng ten tivi, cây tre gỗ tươi gần đường dây điện để tránh va chạm gây nên nên phóng điện dẫn đến tai nạn. </span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at6.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ;  font-size: 16px; line-height: 20px; margin: 15px"> Khi thấy trụ điện ngã đổ hoặc dây điện đứt, rơi xuống thì không được đến gần, cầm, nắm vào dây điện và ngăn ngừa không cho người khác (kể cả súc vật) đến gần . Đồng thời nhanh chóng tìm cách báo ngay cho đơn vị quản lý điện hoặc chính quyền địa phương gần nhất biết. </span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at7.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ;font-size: 16px; line-height: 20px; margin: 15px">Không dùng điện để rà cá, bẫy chuột, chống trộm cắp … gây nguy hiểm đến tính mạng con người. </span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at8.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ; font-size: 16px; line-height: 20px; margin: 15px">Cắt ngay cầu dao, cầu chì, aptomat .v.v.. đầu nguồn điện vào nhà để phòng mạng điện bị ngập nước gây tai nạn khi có lũ lụt. </span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at9.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ;font-size: 16px; line-height: 20px; margin: 15px">Chú ý chặt cây gần đường dây điện, có thể bị phóng điện gây nguy hiểm đến tính mạng . Cần liên hệ phối hợp với đơn vị quản lý điện tại địa phương. </span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at10.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ;font-size: 16px; line-height: 20px; margin: 15px"> Khi có người bị điện giật thì hô to gọi mọi người đến cứu giúp. Cần khẩn trương tách nạn nhận ra khỏi nguồn điện và nhanh chóng cứu chữa người bị nạn đồng thời gọi báo điện thoại cấp cứu 115. </span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at11.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ;font-size: 16px; line-height: 20px; margin: 15px"> Không đào đất gây, lún sụt móng cột điện, trồng và để cành cây, dây leo của gia đình đeo, bám hoặc đến gần cột điện và dây dẫn điện. </span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at12.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ;font-size: 16px; line-height: 20px; margin: 15px"> Không đá bóng, thả diều ở gần đường dây điện; quăng ném bất kỳ vật gì lên đường dây và trạm điện; bắn chim đậu trên dây điện, trạm điện; phơi quần áo, đồ dùng lên dây điện. </span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at13.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ;font-size: 16px; line-height: 20px; margin: 15px">Không dùng các loại cây đã bị mục để làm cột điện. </span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at14.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ;font-size: 16px; line-height: 20px; margin: 15px"> Không tự ý sửa chữa điện của gia đình nếu không có kiến thức về điện, mà phải nhờ hoặc báo cho nguời có chuyên môn về điện đến sửa chữa. </span>								
+						</div> 
+						<div class="single-pf">
+							<img src="uploads/antoandien/at15.jpg" style="width: 300px ; height: 200px">
+							<br><span style="color:#333; font-family: 'Arial' ; font-size: 16px; line-height: 20px; margin: 15px"> Không họp chợ, tụ tập đông người dưới đường dây điện. </span>								
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- AN TOÀN SỬ DỤNG ĐIỆN TRONG NHÂN DÂN-->
+ 

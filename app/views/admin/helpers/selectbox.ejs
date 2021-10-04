@@ -1,0 +1,12 @@
+<% 
+    selectboxHelper = (dataGroup , optionSelected =''  ) => {
+        let xhtml = '';
+        dataGroup.forEach((data) =>{
+            let selected = (data.id == optionSelected) ? `selected="selected"` : '';            
+            let id       = (data.id == undefined) ? 'Novalue' : data._id;
+            xhtml += `<option value="${id}" ${selected}>${data.name}</option>`;
+        });
+        return `${xhtml}`;
+    }
+%> 
+  

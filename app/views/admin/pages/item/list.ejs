@@ -1,0 +1,191 @@
+<!-- <div class="row">
+   <div class="col-lg-12">
+      <h1 class="page-header">Item Management</h1>
+   </div>
+</div> -->
+<%- include('./../../helpers/status') %>
+<%- include('./../../helpers/pagination') %>
+<%- include('./../../helpers/sort') %>
+<% 
+	const collection = 'item';
+	const linkPrefix = systemConfig.prefixAdmin + `/${collection}`;
+%>
+<!-- 
+   <%= linkPrefix %> 
+-->
+<%- include('./../../elements/flash') %>
+
+<div class="row">
+   <div class="col-lg-12">
+      <div class="panel panel-info">
+         <div class="panel-heading">
+            Search & Filter
+            <a href="<%= linkPrefix %>">
+            <span id="icon-reload" class="glyphicon glyphicon-refresh"></span>
+            </a>
+         </div>
+         <div class="panel-body">
+            <div class="row">
+               <div class="status-list col-sm-6 pl0">
+                  <a class="btn m-b-sm btn-success btn-sm" href="<%= linkPrefix %>/all">
+                  ALL (4)
+                  </a>
+                  <a class="btn m-b-sm btn-default btn-sm" href="<%= linkPrefix %>/active">
+                  ACTIVE (4)
+                  </a>
+                  <a class="btn m-b-sm btn-default btn-sm" href="<%= linkPrefix %>/inactive">
+                  INACTIVE (0)
+                  </a>
+               </div>
+               <!-- REFRESH - CLEAR -->
+               <div class="col-sm-6">
+                  <form action="<%= linkPrefix %>/" method="GET">
+                     <div class="input-group">
+                        <input type="text" class="form-control" name="keyword" placeholder="Search for..." value="<%= keyword %>">
+                        <!-- <input type="hidden" value="all"> -->
+                        <span class="input-group-btn">
+                        <button class="btn btn-info" type="submit">Search</button>
+                        </span>
+                        <span class="input-group-btn">
+                        <button class="btn btn-success" type="button"><a href="<%= linkPrefix %>">Clear</a></button>
+                        </span>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-lg-12">
+      <div class="panel panel-info">
+         <div class="panel-heading">
+            Danh sách             
+         </div>
+         <!-- /.panel-heading -->
+         <div class="panel-body">
+            <form role="form" class="form-inline zt-form" id="zt-form" action="" method="post">
+               <div class="zcontrols">
+                  <select name="action" class="form-control slbAction">
+                     <option value="">Bulk Action</option>
+                     <option value="<%= linkPrefix %>/change-status/Active">
+                        Active
+                     </option>
+                     <option value="<%= linkPrefix %>/change-status/Inactive">
+                        Inactive
+                     </option>
+                     <option value="<%= linkPrefix %>/save-ordering/11">
+                        Change Ordering
+                     </option>
+                     <option value="<%= linkPrefix %>/delete/11">
+                        Delete
+                     </option>
+                  </select>
+                  <button class="btn btn-info btnAction" type="button" id="btn-action" value="btnAction" disabled>Apply</button>
+                  <div class="pull-right">
+                     <a href="<%= linkPrefix %>/form" class="btn btn-primary btn-addNew">Thêm mới  </a>
+                  </div>
+               </div>
+               <div class="table-responsive">                  
+                  <table class="table table-striped table-bordered table-hover">                                            
+                     <thead>
+                        <tr>
+                           <th>
+                              <input type="checkbox" class="cbAll" />
+                           </th>
+                           <th>#</th>
+                           <th style="width:130px">                               
+                              <%- sortHelper(linkPrefix, 'Name', 'name',  sortField, sortType) %>   
+                           </th>
+                           
+                           <th>Email</th>
+                           <th>Pass</th>
+                           <th>Title</th>
+                           <th>Content</th>
+                           <th>                              
+                             <%- sortHelper(linkPrefix, 'Status', 'status',  sortField, sortType) %>   
+                           </th>
+                           <th>
+                              <%- sortHelper(linkPrefix, 'Position', 'position',  sortField, sortType) %>   
+                           </th>
+                           <th>Radio</th>
+                           <th>Typeshow</th>                           
+                           <th>
+                              <%- sortHelper(linkPrefix, 'Order', 'order',  sortField, sortType) %>   
+                           </th>
+                           <th>Seen</th>                           
+                           <th>Thumb</th>
+                           <th>TableMain.name</th>
+                           <th>TableMain.fullname</th>
+                           <th>
+                              <%- sortHelper(linkPrefix, 'Created', 'createdAt',  sortField, sortType) %>   
+                           </th>
+                           <th>Action</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        
+                        <% for(let i=0 ; i < data.length ; i++ ) { %>
+                           <tr>
+                              <td>
+                                 <input type="checkbox" name="cid" value=" " />
+                              </td>
+                              <td><%= i+1 %></td>
+                              <td><%= data[i].name %></td>
+                              <td><%= data[i].email %></td>
+                              <td><%= data[i].pass %></td>
+                              <td><%= data[i].title %></td>
+                              <td><%= data[i].content %></td>
+                              <td style="text-align:center;" >
+                                 <%- statusHelper(linkPrefix , data[i].status,  data[i].id) %> 
+                                 <!-- cách gọi từ helper (cách khác như position bên dưới) -->
+                              </td>
+                              
+                              <td style="text-align:center;">
+                                 <% if(data[i].position ==='Top') {%>
+                                    <a href="<%= linkPrefix %>/change-position/<%= data[i].id %>/<%= data[i].position %>">
+                                       <span class="btn btn-success btn-sm">Top</span>
+                                    </a>
+                                    <%} else if(data[i].position ==='None') {%>
+                                       <a href="<%= linkPrefix %>/change-position/<%= data[i].id %>/<%= data[i].position %>">
+                                          <span class="btn btn-warning btn-sm">None</span>
+                                       </a>
+                                 <%}%>
+                              </td>
+
+                              <td style="text-align:center;">
+                                 <% if( data[i].radio === true ) {%>
+                                    <a href="<%= linkPrefix %>/change-radio/<%= data[i].id %>/<%= data[i].radio %>" class="fa fa-check-square-o fa-lg"   style="font-size: 20px; text-decoration: none">  </a>                      
+                                 <% } else { %>                                             
+                                    <a href="<%= linkPrefix %>/change-radio/<%= data[i].id %>/<%= data[i].radio %>" class="fa fa-square-o fa-lg"          style="font-size: 20px; text-decoration: none"  >  </a>                      
+                                 <%}%>
+                              </td>
+
+                              <td><%= data[i].typeshow %></td>
+                              <td><%= data[i].order %></td>
+                              <td><%= data[i].seen %></td>
+                              <td><%= data[i].thumb %></td>
+                              <td><%= data[i].tablemain.name %></td>
+                              <td><%= data[i].tablemain.fullname %></td>                              
+                              <td><%= moment(data[i].createdAt).format(systemConfig.dateFormat) %></td>
+                              <td>                                 
+                                 <a href="<%= linkPrefix %>/form/<%= data[i].id %>"   style=" font-size:15px;" class="btn btn-edit glyphicon glyphicon-edit"> </a>
+                                 <a href="<%= linkPrefix %>/delete/<%= data[i].id %>"  style=" font-size:15px;" class="btn btn-delete glyphicon glyphicon-trash"> </a>
+                              </td>
+                           </tr>
+                        <% } %>
+
+                     </tbody>
+                  </table>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+   <!-- PAGINAITON -->
+   <div class="col-lg-12">
+      <%- paginationHelper(pagination, linkPrefix,   keyword) %>
+   </div>
+</div>
+
+       
+     

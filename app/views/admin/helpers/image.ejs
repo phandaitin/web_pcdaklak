@@ -1,0 +1,13 @@
+<% 
+    imageHelper = (folder, imageName, style ='' ) => {
+        if(imageName == null){ 
+            <!-- imageName = 'no-avatar.jpg'; -->
+            imageName = 'no_avatar.png';
+        }
+        return `<img  ${style} src="${folder + imageName}" alt="ImageError" />`;
+    }
+%>
+ 
+
+
+

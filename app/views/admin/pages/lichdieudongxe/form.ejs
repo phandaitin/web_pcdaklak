@@ -1,0 +1,52 @@
+<%- include('./../../helpers/selectbox') %>
+<%- include('./../../helpers/image') %>
+<% 
+    const collection = 'lichdieudongxe';
+    const linkPrefix = systemConfig.prefixAdmin + `/${collection}`;
+    const folderUpload = 'uploads' + `/${collection}/`;
+    const link_no_avatar = folderUpload +'no_avatar.png' ; 
+%>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <!--  neeus cos loix thi mow show ra -->
+            <% if (notify.err) { %>  
+                <div class="alert alert-danger role="alert"  >
+                    <span class="close-btn">&times;</span> 
+                   <%= notify.err %>
+                </div>
+             <% } %>
+             <!--  -->
+            <div class="panel-heading">
+                Form 
+            </div>
+            <div class="panel-body"> 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form" action="<%= linkPrefix %>/save" method="POST" enctype="multipart/form-data"> 
+                                
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input class="form-control" type="text" name="name" value="<%= data.name %>" >
+                            </div> 
+                            
+                            <div class="form-group">
+                                <label> File upload</label>
+                                <input class="form-control" type="file" name="fileUpload"   >
+                            </div>
+                                        
+
+                            <div>
+                                <input class="form-control" type="hidden" name="id" value="<%= data.id %>"   >
+                                <button type="submit" class="btn btn-primary">Submit </button>
+                                <a type="button" href="<%= linkPrefix %>" class="btn btn-default">Cancel</a>                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 

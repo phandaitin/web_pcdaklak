@@ -1,0 +1,19 @@
+ <% 
+    filterStatusHelper = (linkPrefix, statusFilter,  keyword) => { 
+        let xhtml = '';
+        statusFilter.forEach((data)=> {
+            let link = linkPrefix +'/status/' + data.value;
+            if(keyword !== '' && keyword !== undefined) 
+               link += '?keyword=' + keyword;
+            xhtml +=`
+                  <a class="btn m-b-sm btn-${data.class} btn-sm" href="${link}">
+                    ${data.name + " (" + data.count +")" }
+                  </a>`;
+        })
+        return xhtml;
+    } 
+%>
+ 
+
+
+ 

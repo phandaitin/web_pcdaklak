@@ -1,0 +1,184 @@
+<% 
+	const folderUploads   ='uploads/baiviet/'
+	 collection = 'bai-viet-search';
+	const linkPrefix = systemConfig.prefixAdmin + `/${collection}`;
+%>
+<!-- Single News -->
+
+ 
+<section class="news-single section">
+	<div class="container">
+		<div class="row">			
+				<div class="col-lg-8 col-12">
+					<% for(let i=0; i< baivietSearch.length ; i++) { %>
+					<div class="row">
+						<div class="col-12">
+							<div class="single-main">
+								<h3 class="news-title"><%- baivietSearch[i].name %>	</h3>
+								<div class="meta-tin-chitiet">	
+									<span class="date"><i class="fa fa-calendar"></i> <%= moment(baivietSearch[i].updatedAt).format(systemConfig.dateFormat) %> 
+										| <%= baivietSearch[i].seen %> views  </span>
+								</div> 			
+								<div >	
+									<h5 style="padding: 15px;" ><%= baivietSearch[i].title %></h5>							
+								</div>						 
+								<div class="news-head">
+									<img src="<%= folderUploads + baivietSearch[i].fileUpload %>">
+								</div>													
+								<div class="news-text" style="padding: 15px;color: #333; font-family: 'Arial'; ">
+									<%- baivietSearch[i].content %>
+								</div>
+							</div>
+											
+					
+						</div>	
+					</div>	
+					<% } %>
+
+				</div>
+			
+
+			<div class="col-lg-4 col-12">
+				<div class="main-sidebar">
+					<div class="single-widget side-tags">						
+						<a href="https://eoffice.cpc.vn/">
+							<img src="uploads/banner/chatoffice.png"style="width: 100%; height: 80px"></>	
+						</a>						
+						<a href="https://ksop.cpc.vn/login">
+							<img src="uploads/banner/ksop.png" style="width: 100%; height: 80px"></>	
+						</a>						 
+						<a href="https://elearning.evn.com.vn/login">
+							<img src="uploads/banner/elearning.png" style="width: 100%; height: 80px"></>	
+						</a>
+						<a href="https://hrms.cpc.vn/">
+							<img src="uploads/banner/hrms.png" style="width: 100%; height: 80px"></>	
+						</a>	
+						<a href="/ung-dung-noi-bo/">
+							<img src="uploads/banner/ungdungnoibo.png" style="width: 100%; height: 80px"></>	
+						</a>					 
+						
+					</div>
+					<!-- FACEBOOK YOUTUBE  -->
+					<div class="single-widget side-tags">
+						<div class="row">
+							<div class="col-lg-7 col-12">							
+								<div class="col-lg-12 col-12" style="text-align:center;">
+									<script src="https://apis.google.com/js/platform.js"></script>
+									<div class="g-ytsubscribe" data-channelid="UC2ijllfPCBz_Mb0Na5XaXVg" 
+										data-layout="full" data-theme="dark" data-count="default"> 
+									</div>
+								</div>
+								<div class="col-lg-12 col-12"  style="text-align:center;">
+									<script src="https://apis.google.com/js/platform.js"></script>
+									<div class="g-ytsubscribe" data-channelid="UC8SgUsfA2OGNDf4ZwGt9JLA" 
+										data-layout="full" data-theme="dark" data-count="default">
+									</div>						 
+								</div>
+							 
+								<div class="col-lg-12 col-12"  style="text-align:center;">
+									<script src="https://apis.google.com/js/platform.js"></script>
+									<div class="g-ytsubscribe" data-channelid="UCiIXYmwc2gmPUlJkiNqhx_Q" 
+										data-layout="full" data-theme="dark" data-count="default">
+									</div>						 
+								</div>
+							</div>	
+							<div class="col-lg-5 col-12" style="text-align:center;">
+								<a href="https://www.facebook.com/groups/ketnoidongnghiep" target="_blank">								
+									<img src="uploads/image/fbcpc.jpg" 
+									style="border-radius:100%; height:90% "> 
+								</a> 
+							</div>
+							 
+						</div>						 
+						 
+				   </div>
+					<!-- FACEBOOK YOUTUBE  -->
+
+					<!-- BAO DAKALK -->
+					<div class="single-widget search">							
+							<div class="col-lg-12">
+							<ul class="scroll3">
+								<li>
+									<a href="https://motcua.daklak.gov.vn/" style="text-decoration: none" title="Báo Đắk Lắk" target="_blank">
+										<img src="uploads/banner/motcua.png" class="img-responsive" style="padding-top:10px"/>							
+									</a>
+								</li>		
+								<li>
+									<a href="https://baodaklak.vn/" style="text-decoration: none" title="Báo Đắk Lắk" target="_blank">
+										<img src="uploads/banner/baodaklak1.png" class="img-responsive" style="padding:15px 0px"/>							
+									</a>
+								</li>		
+								<li>
+									<a href="https://daklak24h.com.vn/" style="text-decoration: none" title="Đắk Lắk 24h" target="_blank" >
+										<img src="uploads/banner/baodaklak2.png" alt="" class="img-responsive" />
+									</a>						
+								</li>
+								<li>
+									<a href="https://daklak.gov.vn/" style="text-decoration: none" title="Cổng thông tin điện tử Tỉnh Đắk Lắk" target="_blank" >
+										<img src="uploads/banner/baodaklak3.png" alt="" class="img-responsive" />
+									</a>
+								</li>
+											
+							</ul>	 				
+						</div>
+					</div>
+					<!-- CHUYEN MỤC LIÊN QUAN  -->
+
+					<div class="single-widget category">
+						<!-- style="color: #2905A1; font-family: 'Arial' ; font-weight: bold; font-size: 16px; -->
+						<h3 class="title" style=" color: #2905A1; font-family: 'Arial' ; font-weight: bold; font-size: 16px; ">
+							CHUYÊN MỤC KHÁC
+						</h3>
+						<ul class="categor-list" style="padding-left: 15px" >
+							<li>
+								<a href="/"> - Trang chủ</a>
+							</li>
+							<li>
+								<a href="/chuyenmuc/tin-tuc-tong-hop"> - Tin Tổng Hợp</a>
+							</li>	
+							<li>
+								<a href="https://corona.kompa.ai/"> - Covid 19-Cập nhật</a>
+							</li>						
+						</ul>
+					</div>
+				 
+					 
+					<div class="single-widget side-tags">
+						<h3 class="title" style=" color: #2905A1; font-family: 'Arial' ; font-weight: bold; font-size: 16px; ">
+							HOẠT ĐỘNG KHÁC
+						</h3>
+						
+						<ul class="tag">
+							<li><a href="#">Hình ảnh doanh nghiệp</a></li>
+							<li><a href="#">Việc làm ý nghĩa</a></li>
+							<li><a href="#">Tập san công ty</a></li>
+							<li><a href="#">Thành tích đạt được</a></li>
+							<li><a href="https://pclangson.npc.com.vn/" target="blank">Đơn vị kết nghĩa</a></li>
+							<li><a href="#">Hoạt động khác</a></li>							
+						</ul>
+					</div>
+				 
+		</div>					
+			
+
+		 
+
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</div>
+</section>
+<!--/ End Single News -->
+	

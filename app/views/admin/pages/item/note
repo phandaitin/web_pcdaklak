@@ -1,0 +1,28 @@
+    <div class="form-group">
+                                           <label>Order</label>
+                                           <input class="form-control" type="number" name="order" value=" " >
+                                       </div>
+                                        
+                                       <div class="form-group">
+                                           <label>Status</label>
+                                           <select name="status" class="form-control" >
+                                               <option value="Novalue">Choose Status</option>
+                                               <option value="Active"  <%= (data.status == "Active") ? 'selected="selected"' : '' %> >Active</option>
+                                               <option value="Inactive"  <%= (data.status == "Inactive") ? 'selected="selected"' : '' %> >Inactive</option>
+                                           </select>
+                                       </div>
+<!-- 
+                                       <div class="form-group">
+                                        <label>Position</label>
+                                            <select name="position" class="form-control" >
+                                                <option value="Novalue">Choose Position</option>
+                                                <option value="Top"  <%= (data.position == "Top") ? 'selected="selected"' : '' %> >Top</option>
+                                                <option value="None"  <%= (data.position == "None") ? 'selected="selected"' : '' %> >None</option>
+                                            </select>
+                                        </div>
+                                       
+                                        <div class="form-group">
+                                            <label> Check radio ------>  </label>    
+                                            <label> <input type="radio" name="check" value = 1 <%= (data.check == 1) ? checked = 'checked': '' %> >  Yes </label> 
+                                            <label> <input type="radio" name="check" value = 0 <%= (data.check == 0) ? checked = 'checked': '' %>>  No  </label> 
+                                        </div>

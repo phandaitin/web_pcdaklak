@@ -1,0 +1,143 @@
+
+<% 
+const collection = 'item';
+const linkPrefix = systemConfig.prefixAdmin + `/${collection}`;
+%>
+
+<div class="navbar-default navbar-static-side" role="navigation">
+	<div class="sidebar-collapse">
+	   <ul class="nav" id="side-menu">
+			
+			<!-- phantin -->
+			<li>			 
+				<a href="#"  style="color: #a82e2e" ><i class="fa fa-gear fa-fw"></i>Thu gọn Menu
+					<span class="fa arrow" >
+
+					</span>
+				</a>
+				<ul class="nav nav-second-level collapse in" aria-expanded="true">					
+				</ul>	
+				 
+			</li>
+
+
+			<!-- GROUPS USERS -->
+			<li>
+				<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Groups - Users<span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level collapse in" aria-expanded="true">
+					<li>						
+						<a href="/<%= systemConfig.prefixAdmin %>/group"><i class="fa fa-angle-double-right fa-fw"></i> Groups</a>
+					</li>
+					<li>
+							<a href="/<%= systemConfig.prefixAdmin %>/user"><i class="fa fa-angle-double-right  fa-fw"></i>User</a>
+					</li>
+					<li>
+						<a href="/<%= systemConfig.prefixAdmin %>/user_ok"><i class="fa fa-angle-double-right  fa-fw"></i>Email</a>
+					</li>
+
+				</ul>			
+			</li>
+			<!--------------------------->
+
+			<!-- Chuyen muc bài viết - video-->
+			<li class="active">
+				<a href="#"><i class="fa fa-group fa-file-text fa-fw"></i> Chuyên mục - Bài viết<span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level collapse in" aria-expanded="true">
+					<li>
+						<a href="/<%= systemConfig.prefixAdmin %>/chuyenmuc"><i class="fa fa-angle-double-right fa-fw"></i> Chuyên mục</a>
+					</li>
+					<li>
+						<a href="/<%= systemConfig.prefixAdmin %>/baiviet"><i class="fa fa-angle-double-right fa-fw"></i> Bài viết</a>
+					</li>				 
+					<li>
+						<a href="/<%= systemConfig.prefixAdmin %>/video">
+							<i class="fa fa-angle-double-right fa-fw"></i> Video
+						</a>
+					</li>				 
+				</ul>	
+			</li>
+
+			<!-- CÔNG TÁC TB MỜI HỌP-->
+			<li class="active">
+				<a href="#"><i class="fa fa-group fa-file-text fa-fw"></i> Lịch CTLĐ- TB Mời họp<span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level collapse in" aria-expanded="true">
+					<li>
+						<a href="#">
+							<i class="fa fa-angle-double-right fa-fw"></i> Lịch công tác lãnh đạo
+						</a>
+					</li>
+					<li>
+						<a href="/<%= systemConfig.prefixAdmin %>/thongbaomoihop">
+							<i class="fa fa-angle-double-right fa-fw"></i> Thông báo mời họp
+						</a>
+					</li>		 
+				</ul>	
+			</li>
+				
+			<!-- PHƯƠNG THỨC TUẦN - ĐIỀU ĐỘNG XE-->
+			<li class="active">
+				<a href="#"><i class="fa fa-group fa-file-text fa-fw"></i> PTVH - ĐĐỘNG XE<span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level collapse in" aria-expanded="true">
+					<li>
+						<a href="/<%= systemConfig.prefixAdmin %>/phuongthucvanhanh">
+							<i class="fa fa-angle-double-right fa-fw"></i> Phương thức vận hành
+						</a>
+					</li>
+					<li>
+						<a href="/<%= systemConfig.prefixAdmin %>/lichdieudongxe">
+							<i class="fa fa-angle-double-right fa-fw"></i> Lịch điều động xe
+						</a>
+					</li>
+				</ul>	
+			</li>
+
+			
+			
+			<!-- Ứng dụng nội bộ - TV sáng kiến-->
+			<li class="active">
+				<a href="#"><i class="fa fa-group fa-file-text fa-fw"></i> Ứng dụng - Sáng kiến<span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level collapse in" aria-expanded="true">
+					<li>
+						<a href="/<%= systemConfig.prefixAdmin %>/ungdungnoibo">
+							<i class="fa fa-angle-double-right fa-fw"></i> Ứng dụng nội bộ
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-angle-double-right fa-fw"></i> Thư viện sáng kiến
+						</a>
+					</li>
+				</ul>	
+			</li>
+				
+			<!-- CẬP NHẬT SỐ LIỆU KINH DOANH-->
+			<li class="active">
+				<a href="#"><i class="fa fa-group fa-file-text fa-fw"></i> Cập nhật KH - TPhẩm<span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level collapse in" aria-expanded="true">
+					<li>
+						<a href="/<%= systemConfig.prefixAdmin %>/kdoanh">
+							<i class="fa fa-angle-double-right fa-fw"></i> Cập nhật KH - TPhẩm
+						</a>
+					</li>
+				</ul>	
+			</li>
+				 
+
+			<li>			 
+				
+				<a href="/<%= systemConfig.prefixAdmin %>/auth/logout">
+					<!-- <i class="fa fa-angle-double-right fa-fw"></i>Items -->
+					<i class="fa fa-sign-out fa-fw"></i> logout
+				</a>	
+					
+			</li>
+
+				
+		
+		</li> 
+
+	</div>	 
+ </div>
+
+
+ <!-- ////////////////////////// --> 

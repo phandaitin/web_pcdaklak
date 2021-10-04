@@ -1,0 +1,106 @@
+ 
+<%- include('./../../helpers/status') %>
+<%- include('./../../helpers/pagination') %>
+<%- include('./../../helpers/sort') %>
+<%- include('./../../helpers/image') %>
+
+<% 
+	const collection = 'thongbaomoihop';
+	const linkPrefix = systemConfig.prefixAdmin + `/${collection}`;
+   const folderUpload = 'uploads' + `/${collection}/`;
+%>
+<!-- 
+   <%= linkPrefix %> 
+-->
+<%- include('./../../elements/flash') %>
+<div class="row">
+   <div class="col-lg-12">
+      <div class="panel panel-info">
+         <div class="panel-heading">
+            Search & Filter
+            <a href="<%= linkPrefix %>">
+            <span id="icon-reload" class="glyphicon glyphicon-refresh"></span>
+            </a>
+         </div>
+         <div class="panel-body">
+            <div class="row">
+               <div class="status-list col-sm-4 pl0">
+                   
+               </div>
+               <!-- REFRESH - CLEAR -->
+               <div class="col-sm-4">
+                  <form action="<%= linkPrefix %>/" method="GET">
+                     <div class="input-group">
+                        <input type="text" class="form-control" name="keyword" placeholder="Search for..." value="<%= keyword %>">
+                        <!-- <input type="hidden" value="all"> -->
+                        <span class="input-group-btn">
+                        <button class="btn btn-info" type="submit">Search</button>
+                        </span>
+                        <span class="input-group-btn">
+                        <button class="btn btn-success" type="button"><a href="<%= linkPrefix %>">Clear</a></button>
+                        </span>
+                     </div>
+                  </form>
+               </div>
+
+               <div class="status-list col-sm-4 pl0">
+                  <div class="pull-right">
+                     <a href="<%= linkPrefix %>/form" class="btn btn-primary btn-addNew">Thêm mới  </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-lg-12">
+      <div class="panel panel-info">
+         <div class="panel-heading">
+            Danh sách             
+         </div>
+         <!-- /.panel-heading -->
+         <div class="panel-body">
+            <form role="form" class="form-inline zt-form" id="zt-form" action="" method="POST" > 
+               <div class="zcontrols">
+                  
+                
+               </div>
+               <div class="table-responsive">                  
+                  <table class="table table-striped table-bordered table-hover">                                            
+                     <thead>
+                        <tr>
+                          
+                           <th>#</th>                                                                      
+                           <th>Nội dung</th>                           
+                           <th>Action</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        
+                        <% for(let i=0 ; i < data.length ; i++ ) { %>
+                           <tr>
+                              
+                              <td><%= i+1 %></td>                             
+                              <td><%= data[i].name %></td>
+                             
+                              <td>                                 
+                                 <a href="<%= linkPrefix %>/form/<%= data[i].id %>"   style=" font-size:15px;" class="btn btn-edit glyphicon glyphicon-edit"> </a>
+                                 <a href="<%= linkPrefix %>/delete/<%= data[i].id %>"  style=" font-size:15px;" class="btn btn-delete glyphicon glyphicon-trash"> </a>
+                              </td>
+                           </tr>
+                        <% } %>
+
+                     </tbody>
+                  </table>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+   <!-- PAGINAITON -->
+   <div class="col-lg-12">
+      <%- paginationHelper(pagination, linkPrefix,  , keyword) %>
+   </div>
+</div>
+
+       
+     

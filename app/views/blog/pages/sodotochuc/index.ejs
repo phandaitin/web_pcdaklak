@@ -1,0 +1,94 @@
+ 
+<!-- Single News -->
+<section style="padding-bottom:50px">
+	<div class="container">
+	  
+		<div   style="padding:30px 30px ; text-align:justify "   >			
+			<h4 style="text-align:center; color: #1f1fe6; font-family: arial; font-weight: bold;">
+				SƠ ĐỒ TỔ CHỨC CÔNG TY
+			</h4> <br><br>
+			 
+		</div> 
+		<div class="chuyenmuc-tin1" style="margin-left:-7px; margin-right: -7px ; 	text-align:center  ; padding-top: 30px;" >
+			<img src="/uploads/image/sodotochuc.gif" alt="tòa nhà công ty"> <br>
+		</div>
+		
+ 
+ 
+	</div>
+</section>
+<!--/ End Single News -->
+
+<!-- 
+<script>
+	var n = localStorage.getItem('on_load_counter');
+	
+	if (n === null) {
+	  n = 0;
+	}
+	n++;
+	
+	localStorage.setItem("on_load_counter", n);
+	
+	nums = n.toString().split('').map(Number);
+	document.getElementById('CounterVisitor').innerHTML = '';
+	for (var i of nums) {
+	  document.getElementById('CounterVisitor').innerHTML += '<span class="counter-item">' + i + '</span>';
+	}
+</script> -->
+<!-- 
+
+<script>
+ incrementAndShowValue();
+
+function incrementAndShowValue() {
+  var value = getCookie("visitcounter") || 0;
+  var newValue = ("00000" + (Number(value) + 1)).slice(-6);
+  var container = document.getElementById("counterVisitor");
+  String(newValue).split("").forEach(function(item, index) {
+    container.children[index].innerHTML = item;
+  });
+  counter++;
+  setCookie("visitcounter", counter);
+}
+
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + value + expires + "; path=http://localhost:3000/";
+}
+
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+</script> -->
+<!-- 
+<script>
+		const countEl = document.getElementById('count');
+
+		updateVisitCount();
+
+		function updateVisitCount() {
+			fetch('https://api.countapi.xyz/hit/https://pcdaklak.cpc.vn')
+			.then(res => res.json())
+			.then(res => {
+				countEl.innerHTML = res.value;
+			})
+		}
+	
+	// $.getJSON("https://api.countapi.xyz/hit/sdsd/visits", function(response) {
+    // $("#visits").text(response.value);
+	// });
+
+</script> -->

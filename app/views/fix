@@ -1,0 +1,5 @@
+
+- khi edit usser grous chuwa dc
+- khi sua image van chua lay dc
+
+<h6><%- data.name.replace(/(<([^>]+)>)/igm,"").substr(0, 50) %> </h6>
