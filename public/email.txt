@@ -1,0 +1,39 @@
+/* 1 */
+{
+    "_id" : ObjectId("614dac023232da1d08fb4c56"),
+    "email" : "tindlpc@gmail.com",
+    "password" : "$2b$10$RmzPvMFEeVFAEsrAHXU3Ye4tKNYyB0nYx/vWL1DQY2u.BLinRWDHu",
+    "createdAt" : ISODate("2021-09-24T10:44:18.694Z"),
+    "updatedAt" : ISODate("2021-09-24T10:44:18.694Z"),
+    "__v" : 0
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("614dae08cb75f49414199fd4"),
+    "email" : "tindlp1c@gmail.com",
+    "password" : "$2b$10$pwvaDsKBuuxTC.zU7a51oessu8/fnnmC5TSBOr7fIb3QGcuy5eVUS",
+    "createdAt" : ISODate("2021-09-24T10:52:56.454Z"),
+    "updatedAt" : ISODate("2021-09-24T10:52:56.454Z"),
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("614dae17cb75f49414199fe1"),
+    "email" : "Fbawithphan@gmail.com",
+    "password" : "$2b$10$BurH/TVINkocRGrQ01hZSuYL8jX8DRMWnUKmwWOuX8WPbTf4nX7m6",
+    "createdAt" : ISODate("2021-09-24T10:53:11.627Z"),
+    "updatedAt" : ISODate("2021-09-24T10:53:11.627Z"),
+    "__v" : 0
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("614dae2bcb75f49414199ff7"),
+    "email" : "tindlpc22222@gmail.com",
+    "password" : "$2b$10$JMo5zIQim6cDmE0mJ3ts4OCqgcds6KxizsJnWw0i/w9xPm4TvXClu",
+    "createdAt" : ISODate("2021-09-24T10:53:31.059Z"),
+    "updatedAt" : ISODate("2021-09-24T10:53:31.059Z"),
+    "__v" : 0
+}

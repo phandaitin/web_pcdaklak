@@ -1,0 +1,30 @@
+
+/* 1 */
+{
+    "_id" : ObjectId("614afbeaba4a0048f2c11500"),
+    "name" : "Lịch điều động phương tiện vận tải phục vụ SXKD tuần 34 năm 2021 Phòng KH&VT",
+    "fileUpload" : "1632304106491_3.pdf",
+    "createdAt" : ISODate("2021-09-22T09:48:26.676Z"),
+    "updatedAt" : ISODate("2021-09-22T09:48:26.676Z"),
+    "__v" : 0
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("614afc0eba4a0048f2c1150e"),
+    "name" : "Lịch điều động phương tiện vận tải phục vụ SXKD tuần 35 năm 2021 Phòng KH&VT",
+    "fileUpload" : "1632304142299_2.pdf",
+    "createdAt" : ISODate("2021-09-22T09:49:02.431Z"),
+    "updatedAt" : ISODate("2021-09-22T09:49:02.431Z"),
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("614afc22ba4a0048f2c1151c"),
+    "name" : "Lịch điều động phương tiện vận tải phục vụ SXKD tuần 38 năm 2021 Phòng KH&VT",
+    "fileUpload" : "1632304162931_1.pdf",
+    "createdAt" : ISODate("2021-09-22T09:49:22.969Z"),
+    "updatedAt" : ISODate("2021-09-22T09:49:22.969Z"),
+    "__v" : 0
+}

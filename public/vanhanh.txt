@@ -1,0 +1,40 @@
+
+/* 1 */
+{
+    "_id" : ObjectId("614af66d4756b3f6f16111cd"),
+    "name" : "Phương thức vận hành hệ thống điện Đắk Lắk ngày 18, 19, 20/09/2021",
+    "fileUpload" : "1632302701079_4.pdf",
+    "createdAt" : ISODate("2021-09-22T09:25:01.088Z"),
+    "updatedAt" : ISODate("2021-09-22T09:25:01.088Z"),
+    "__v" : 0
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("614af6814756b3f6f16111ec"),
+    "name" : "Tình hình thực hiện phương thức tuần 36/2021, kế hoạch thực hiện phương thức vận hành tuần 39/2021 và dự kiến phương thức vận hành tuần 40/2021",
+    "fileUpload" : "1632302721884_3.pdf",
+    "createdAt" : ISODate("2021-09-22T09:25:21.893Z"),
+    "updatedAt" : ISODate("2021-09-22T09:25:21.893Z"),
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("614af6914756b3f6f16111fa"),
+    "name" : "Phương thức vận hành hệ thống điện Đắk Lắk ngày 21/09/2021",
+    "fileUpload" : "1632302737403_2.pdf",
+    "createdAt" : ISODate("2021-09-22T09:25:37.408Z"),
+    "updatedAt" : ISODate("2021-09-22T09:25:37.408Z"),
+    "__v" : 0
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("614af69d4756b3f6f1611208"),
+    "name" : "Phương thức vận hành hệ thống điện Đắk Lắk ngày 22/09/2021",
+    "fileUpload" : "1632302749354_1.pdf",
+    "createdAt" : ISODate("2021-09-22T09:25:49.417Z"),
+    "updatedAt" : ISODate("2021-09-22T09:25:49.417Z"),
+    "__v" : 0
+}

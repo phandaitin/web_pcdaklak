@@ -1,0 +1,165 @@
+
+/* 1 */
+{
+    "_id" : ObjectId("614734e236bea47f6140c952"),
+    "name" : "PC12CC",
+    "khang" : 33,
+    "tpham" : 333,
+    "createdAt" : ISODate("2021-09-19T13:02:26.106Z"),
+    "updatedAt" : ISODate("2021-09-19T13:02:26.106Z"),
+    "__v" : 0
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("614734ec36bea47f6140c969"),
+    "name" : "PC12DD",
+    "khang" : 44,
+    "tpham" : 444,
+    "createdAt" : ISODate("2021-09-19T13:02:36.809Z"),
+    "updatedAt" : ISODate("2021-09-19T13:02:36.809Z"),
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("61486d26cec83c040237d837"),
+    "name" : "PC12AA",
+    "khang" : 22233,
+    "tpham" : 22233,
+    "createdAt" : ISODate("2021-09-20T11:14:46.826Z"),
+    "updatedAt" : ISODate("2021-09-20T11:14:51.186Z"),
+    "__v" : 0
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("6150903878968ff9cb305ead"),
+    "name" : "PC12BB",
+    "khang" : 111,
+    "tpham" : 111,
+    "createdAt" : ISODate("2021-09-26T15:22:32.474Z"),
+    "updatedAt" : ISODate("2021-09-26T15:22:32.474Z"),
+    "__v" : 0
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("61509110224fb73b99bd153a"),
+    "name" : "PC12EE",
+    "khang" : 1,
+    "tpham" : 11166,
+    "createdAt" : ISODate("2021-09-26T15:26:08.607Z"),
+    "updatedAt" : ISODate("2021-09-26T15:26:08.607Z"),
+    "__v" : 0
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("61509118224fb73b99bd153e"),
+    "name" : "PC12GG",
+    "khang" : 44,
+    "tpham" : 333,
+    "createdAt" : ISODate("2021-09-26T15:26:16.581Z"),
+    "updatedAt" : ISODate("2021-09-26T15:26:16.581Z"),
+    "__v" : 0
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("6150911e224fb73b99bd1542"),
+    "name" : "PC12HH",
+    "khang" : 44,
+    "tpham" : 4443,
+    "createdAt" : ISODate("2021-09-26T15:26:22.459Z"),
+    "updatedAt" : ISODate("2021-09-26T15:26:22.459Z"),
+    "__v" : 0
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("61509124224fb73b99bd1546"),
+    "name" : "PC12II",
+    "khang" : 33,
+    "tpham" : 11166,
+    "createdAt" : ISODate("2021-09-26T15:26:28.266Z"),
+    "updatedAt" : ISODate("2021-09-26T15:26:28.266Z"),
+    "__v" : 0
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("6150912a224fb73b99bd154a"),
+    "name" : "PC12JJ",
+    "khang" : 22,
+    "tpham" : 222,
+    "createdAt" : ISODate("2021-09-26T15:26:34.419Z"),
+    "updatedAt" : ISODate("2021-09-26T15:26:34.419Z"),
+    "__v" : 0
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("61509130224fb73b99bd154e"),
+    "name" : "PC12KK",
+    "khang" : 44,
+    "tpham" : 111111111111.0,
+    "createdAt" : ISODate("2021-09-26T15:26:40.578Z"),
+    "updatedAt" : ISODate("2021-09-26T15:26:40.578Z"),
+    "__v" : 0
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("61509165224fb73b99bd1555"),
+    "name" : "PC12LL",
+    "khang" : 11,
+    "tpham" : 11166,
+    "createdAt" : ISODate("2021-09-26T15:27:33.058Z"),
+    "updatedAt" : ISODate("2021-09-26T15:27:33.058Z"),
+    "__v" : 0
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("6150916a224fb73b99bd1559"),
+    "name" : "PC12MM",
+    "khang" : 44,
+    "tpham" : 11166,
+    "createdAt" : ISODate("2021-09-26T15:27:38.771Z"),
+    "updatedAt" : ISODate("2021-09-26T15:27:38.771Z"),
+    "__v" : 0
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("61509170224fb73b99bd155d"),
+    "name" : "PC12NN",
+    "khang" : 33,
+    "tpham" : 11166,
+    "createdAt" : ISODate("2021-09-26T15:27:44.627Z"),
+    "updatedAt" : ISODate("2021-09-26T15:27:44.627Z"),
+    "__v" : 0
+}
+
+/* 14 */
+{
+    "_id" : ObjectId("61509179224fb73b99bd1561"),
+    "name" : "PC12PP",
+    "khang" : 33,
+    "tpham" : 11166,
+    "createdAt" : ISODate("2021-09-26T15:27:53.066Z"),
+    "updatedAt" : ISODate("2021-09-26T15:27:53.066Z"),
+    "__v" : 0
+}
+
+/* 15 */
+{
+    "_id" : ObjectId("61509181224fb73b99bd1565"),
+    "name" : "PC12",
+    "khang" : 99999999,
+    "tpham" : 999999999999999.0,
+    "createdAt" : ISODate("2021-09-26T15:28:01.393Z"),
+    "updatedAt" : ISODate("2021-09-26T15:28:01.393Z"),
+    "__v" : 0
+}

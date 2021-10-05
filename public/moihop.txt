@@ -1,0 +1,10 @@
+
+/* 1 */
+{
+    "_id" : ObjectId("614b0f4f93d965b015582da7"),
+    "name" : "Trao đổi công tác QLKT Điện lực có điểm QLKT <20 điểm và đứng thứ 14 trong tháng 8/2021 theo công văn số 9591/ĐLPC-KT+AT ngày 25/6/2021 về việc hiệu chỉnh nội dung thông báo số 2483/TB-ĐLPC ngày 02/02/2021",
+    "fileUpload" : "1632309071748_g1.pdf",
+    "createdAt" : ISODate("2021-09-22T11:11:11.758Z"),
+    "updatedAt" : ISODate("2021-09-22T11:11:11.758Z"),
+    "__v" : 0
+}

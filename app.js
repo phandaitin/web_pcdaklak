@@ -60,7 +60,8 @@ app.post('/upload',multipartMiddleware,(req,res)=>{
               //    res.status(201).send(img);
                
                   let fileName = req.files.upload.name;
-                  let url = 'http://localhost:3000/uploads/baiviet/'+fileName;                    
+                  // let url = 'http://localhost:3000/uploads/baiviet/'+fileName;                    
+                  let url = '/uploads/baiviet/'+fileName;                    
                   let msg = 'Upload file thành công';
                   let funcNum = req.query.CKEditorFuncNum;
                  // console.log({url,msg,funcNum});

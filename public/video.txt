@@ -1,0 +1,90 @@
+
+/* 1 */
+{
+    "_id" : ObjectId("614882ab38bfeea95de87974"),
+    "name" : "Hướng dẫn triển khai hỗ trợ giảm giá điện Covid-19 đợt 3",
+    "idvideo" : "7a2I8LWYsBM",
+    "createdAt" : ISODate("2021-09-20T12:46:35.002Z"),
+    "updatedAt" : ISODate("2021-09-20T13:17:18.766Z"),
+    "__v" : 0
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("6148834138bfeea95de87980"),
+    "name" : "Đen - Trốn Tìm ft. MTV band (M/V)",
+    "idvideo" : "Ws-QlpSltr8",
+    "createdAt" : ISODate("2021-09-20T12:49:05.320Z"),
+    "updatedAt" : ISODate("2021-09-20T12:49:05.320Z"),
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("61488bcf24293d4a63599edc"),
+    "name" : "Dịch COVID - 19 căng thẳng, tiêu thụ điện thế nào trong 2 tuần đầu tháng 9?",
+    "idvideo" : "qPllyJuOhjQ",
+    "createdAt" : ISODate("2021-09-20T13:25:35.874Z"),
+    "updatedAt" : ISODate("2021-09-20T13:25:35.874Z"),
+    "__v" : 0
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("61488c847ed96c0ac758563e"),
+    "name" : "Cười rụng răng với màn Parody 11 tháng 5 ngày xuất sắc của BTV Quốc Khánh",
+    "idvideo" : "btA-As17Lng",
+    "createdAt" : ISODate("2021-09-20T13:28:36.030Z"),
+    "updatedAt" : ISODate("2021-09-20T13:28:36.030Z"),
+    "__v" : 0
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("61488dfda406265e333e8251"),
+    "name" : "EVNCPC: Giảm giá điện đợt 4&5/2021",
+    "idvideo" : "w_ywH55HaxI",
+    "createdAt" : ISODate("2021-09-20T13:34:53.884Z"),
+    "updatedAt" : ISODate("2021-09-20T13:34:53.884Z"),
+    "__v" : 0
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("61488e15a406265e333e825f"),
+    "name" : "Nỗ lực khắc phục sự cố điện cho ảnh hưởng của bão số 5 (CONSON)",
+    "idvideo" : "_mHB9rY3UUk",
+    "createdAt" : ISODate("2021-09-20T13:35:17.005Z"),
+    "updatedAt" : ISODate("2021-09-20T13:35:17.005Z"),
+    "__v" : 0
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("61488e36a406265e333e826d"),
+    "name" : "EVNCPC BO NHIEM CAN BO",
+    "idvideo" : "6H6ToVeNk2c",
+    "createdAt" : ISODate("2021-09-20T13:35:50.372Z"),
+    "updatedAt" : ISODate("2021-09-20T13:35:50.372Z"),
+    "__v" : 0
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("614893d062232f0e054088c6"),
+    "name" : "EVN chung sức cùng cả nước phòng chống dịch trong những ngày cuối tháng 8. EVN chung sức cùng cả nước phòng chống dịch trong những ngày cuối tháng 8EVN chung sức cùng cả nước phòng chống dịch trong những ngày cuối tháng 8EVN chung sức cùng cả nước phòng chống dịch trong những ngày cuối tháng 8EVN chung sức cùng cả nước phòng chống dịch trong những ngày cuối tháng 8",
+    "idvideo" : "k--N1xP1_JI",
+    "createdAt" : ISODate("2021-09-20T13:59:44.205Z"),
+    "updatedAt" : ISODate("2021-09-20T14:57:08.389Z"),
+    "__v" : 0
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("61501949a78757da1d7440b9"),
+    "name" : "EVNCPC hỗ trợ giảm giá bán điện đợt 4 và 5",
+    "idvideo" : "GlktbWLrDqE",
+    "createdAt" : ISODate("2021-09-26T06:55:05.619Z"),
+    "updatedAt" : ISODate("2021-09-26T06:55:05.619Z"),
+    "__v" : 0
+}

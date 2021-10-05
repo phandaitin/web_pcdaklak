@@ -1,0 +1,182 @@
+
+/* 1 */
+{
+    "_id" : ObjectId("613dca8918bba8e1d4a7aea6"),
+    "name" : "Tin kinh doanh",
+    "status" : "Inactive",
+    "order" : 4,
+    "toppost" : 3,
+    "typeshow" : 31,
+    "createdAt" : ISODate("2021-09-12T09:38:17.778Z"),
+    "updatedAt" : ISODate("2021-09-27T08:33:07.864Z"),
+    "slug" : "tin-kinh-doanh",
+    "__v" : 0
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("613dca9318bba8e1d4a7aead"),
+    "name" : "Tin kỹ thuật",
+    "status" : "Inactive",
+    "order" : 2,
+    "toppost" : 3,
+    "typeshow" : 31,
+    "createdAt" : ISODate("2021-09-12T09:38:27.931Z"),
+    "updatedAt" : ISODate("2021-09-27T08:33:04.024Z"),
+    "slug" : "tin-ky-thuat",
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("613dcab718bba8e1d4a7aeb4"),
+    "name" : "Tin Đảng - đoàn thể",
+    "status" : "Inactive",
+    "order" : 3,
+    "toppost" : 3,
+    "typeshow" : 31,
+    "createdAt" : ISODate("2021-09-12T09:39:03.537Z"),
+    "updatedAt" : ISODate("2021-09-27T08:32:59.466Z"),
+    "slug" : "tin-dang-doan-the",
+    "__v" : 0
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("613dcb35bbc038d73e5dd6d7"),
+    "name" : "Tin nhân vật sự kiện",
+    "status" : "Inactive",
+    "order" : 5,
+    "toppost" : 4,
+    "typeshow" : 41,
+    "createdAt" : ISODate("2021-09-12T09:41:09.062Z"),
+    "updatedAt" : ISODate("2021-09-21T15:30:13.847Z"),
+    "slug" : "tin-cntt",
+    "__v" : 0
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("61404ea3ed1bf61da40165c9"),
+    "name" : "VH doanh nghiệp -Tri ân KH",
+    "status" : "Inactive",
+    "order" : 5,
+    "toppost" : 31,
+    "typeshow" : 31,
+    "createdAt" : ISODate("2021-09-14T07:26:27.120Z"),
+    "updatedAt" : ISODate("2021-09-22T01:37:17.432Z"),
+    "slug" : "van-hoa-doanh-nghiep",
+    "__v" : 0
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("61404eb6ed1bf61da40165d0"),
+    "name" : "Tri ân khách hàng",
+    "status" : "Inactive",
+    "order" : 6,
+    "toppost" : 3,
+    "typeshow" : 31,
+    "createdAt" : ISODate("2021-09-14T07:26:46.793Z"),
+    "updatedAt" : ISODate("2021-09-21T15:30:11.176Z"),
+    "slug" : "tri-an-khach-hang",
+    "__v" : 0
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("6145ed1c3d3a15f2164303b5"),
+    "name" : "Tin tiêu điểm",
+    "status" : "Inactive",
+    "order" : 12,
+    "toppost" : 2,
+    "typeshow" : 21,
+    "createdAt" : ISODate("2021-09-18T13:43:56.700Z"),
+    "updatedAt" : ISODate("2021-09-21T15:30:09.575Z"),
+    "slug" : "tin-tieu-diem",
+    "__v" : 0
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("6149f732060c5cb5d0e142b5"),
+    "name" : "Tin công nghệ",
+    "status" : "Inactive",
+    "order" : 2,
+    "toppost" : 2,
+    "typeshow" : 2,
+    "createdAt" : ISODate("2021-09-21T15:16:02.542Z"),
+    "updatedAt" : ISODate("2021-09-21T15:30:06.952Z"),
+    "slug" : "tin-cong-nghe",
+    "__v" : 0
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("6149f74a060c5cb5d0e142c6"),
+    "name" : "Tin tổng hợp",
+    "status" : "Active",
+    "order" : 1,
+    "toppost" : 1,
+    "typeshow" : 1,
+    "createdAt" : ISODate("2021-09-21T15:16:26.906Z"),
+    "updatedAt" : ISODate("2021-09-21T15:30:54.905Z"),
+    "slug" : "tin-tong-hop",
+    "__v" : 0
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("6149f7a6060c5cb5d0e142d7"),
+    "name" : "Tin thơ văn",
+    "status" : "Inactive",
+    "order" : 2,
+    "toppost" : 2,
+    "typeshow" : 2,
+    "createdAt" : ISODate("2021-09-21T15:17:58.426Z"),
+    "updatedAt" : ISODate("2021-09-21T15:29:54.704Z"),
+    "slug" : "tin-tho-van",
+    "__v" : 0
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("6149f7ba060c5cb5d0e142e8"),
+    "name" : "Tin công đoàn",
+    "status" : "Inactive",
+    "order" : 2,
+    "toppost" : 2,
+    "typeshow" : 2,
+    "createdAt" : ISODate("2021-09-21T15:18:18.673Z"),
+    "updatedAt" : ISODate("2021-09-21T15:29:49.016Z"),
+    "slug" : "tin-cong-doan",
+    "__v" : 0
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("6149f7da060c5cb5d0e14301"),
+    "name" : "Tin chuyển đổi số",
+    "status" : "Inactive",
+    "order" : 122,
+    "toppost" : 1,
+    "typeshow" : 1,
+    "createdAt" : ISODate("2021-09-21T15:18:50.193Z"),
+    "updatedAt" : ISODate("2021-09-21T15:29:51.607Z"),
+    "slug" : "tin-chuyen-doi-so",
+    "__v" : 0
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("614a8855157352a20653ce2b"),
+    "name" : "Tin đoàn cơ sở PC Đắk Lắk",
+    "status" : "Inactive",
+    "order" : 4,
+    "toppost" : 21,
+    "typeshow" : 21,
+    "createdAt" : ISODate("2021-09-22T01:35:17.362Z"),
+    "updatedAt" : ISODate("2021-09-22T01:35:20.895Z"),
+    "slug" : "tin-doan-co-so-pc-dak-lak",
+    "__v" : 0
+}
